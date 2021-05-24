@@ -29,7 +29,7 @@ Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="examples/icons.html">
+                        <a class="nav-link" href="/consultar">
                             <i class="fas fa-chalkboard text-blue"></i>
                             <span class="nav-link-text">Consultar Sistemas</span>
                         </a>
@@ -174,7 +174,7 @@ Dashboard
     <div class="row justify-content-md-center">
         <div class="col-md-11">
             <div class="card">
-                <div class="card-header"> Usuários Registrados </div>
+                <div class="card-header "> Usuários Registrados </div>
                 <div class="card-body">
                     <div class="table-responsive ">
                         <table class="table">
@@ -189,7 +189,7 @@ Dashboard
                                 <th>Excluir</th>
                             </thead>
                             <tbody>
-                            @foreach ($users as $row)
+                                @foreach ($users as $row)
                                 <tr>
                                     <td>{{$row->id}}</td>
                                     <td>{{$row->name}}</td>
@@ -197,7 +197,7 @@ Dashboard
                                     <td>{{$row->usertype}}</td>
                                     <td>{{$row->email}}</td>
                                     <td>
-                                        <a href="/editar/{{ $row->id }}" button type="button" class="btn btn-outline-primary">Editar</a>
+                                        <a href="/edit/{{ $row->id }}" button type="button" class="btn btn-outline-primary">Editar</a>
                                     </td>
                                     <td>
                                         <form action="/excluir-registro/ {{ $row->id }}" method="post">

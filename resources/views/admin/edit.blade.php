@@ -1,19 +1,20 @@
-<link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-  <!-- Icons -->
-  <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
-  <!-- Argon CSS -->
-  <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+<link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
+<!-- Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+<!-- Icons -->
+<link rel="stylesheet" href="../../assets/vendor/nucleo/css/nucleo.css" type="text/css">
+<link rel="stylesheet" href="../../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+<!-- Argon CSS -->
+<link rel="stylesheet" href="../../assets/css/argon.css?v=1.2.0" type="text/css">
 
 <!-- Sidenav -->
+<title>Editar Permissões</title>
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="/dashboard">
-                <img src="assets/img/brand/inss-logo-4.png" class="navbar-brand-img" alt="..."> <br>
+                <img src="../../assets/img/brand/inss-logo-4.png" class="navbar-brand-img" alt="..."> <br>
                 Catálogo de Sistemas
             </a>
         </div>
@@ -136,7 +137,7 @@
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="media align-items-center">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="assets/img/theme/usuarios-1.png">
+                                    <img alt="Image placeholder" src="../../assets/img/theme/usuarios-1.png">
                                 </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm text-dark font-weight-bold">Usuário Administrador</span>
@@ -172,86 +173,42 @@
 <!-- Header -->
 <hr class="my-0">
 <br>
+
 <div class="container">
-    <!-- Card stats -->
-    <div class="row justify-content-md-center">
-        <div class="col-lg-3 col-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col ">
-                            <h5 class="card-title text-uppercase text-muted mb-0 ">Sistemas para <br> Migrar</h5>
-                            <span class="h2 font-weight-bold mb-0">150</span>
-                        </div>
-                        <div class="col-auto">
-                            <div class="fas fa-shield-alt">
-                            </div>
-                        </div>
-                    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Editar Permissões de Usuário</h3>
                 </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card card-stats">
-                <!-- Card body -->
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sistemas em <br> Atenção</h5>
-                            <span class="h2 font-weight-bold mb-0">44</span>
+                    <form action="">
+                        <div class="form-group" >
+                            <label>Nome</label>
+                            <input type="text" class="form-control" name="name" value="{{ $users->name }}">
                         </div>
-                        <div class="col-auto">
-                            <div class="fas fa-lightbulb">
-
-                            </div>
+                        <div class="form-group" class="form-control">
+                            <label>Tipo de Usuário</label>
+                            <br>
+                            <select class="form-select form-select-sm" aria-label=".form-select-sm" name="usertype">
+                                <option value="admin">Administrador</option>
+                                <option value="user">Usuário Comum</option>
+                            </select>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sistemas <br> Urgentes</h5>
-                            <span class="h2 font-weight-bold mb-0">24</span>
-                        </div>
-                        <div class="col-auto">
-                            <div class="fas fa-exclamation-triangle ">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sistemas <br> Migrados</h5>
-                            <span class="h2 font-weight-bold mb-0">49,65%</span>
-                        </div>
-                        <div class="col-auto">
-                            <div class="fas fa-thumbs-up  rounded-circle shadow">
-                            </div>
-                        </div>
-                    </div>
+                      
+                        <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
-  <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-  <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-  <!-- Argon JS -->
-  <script src="../assets/js/argon.js?v=1.2.0"></script>
+
+<script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/js-cookie/js.cookie.js"></script>
+<script src="../../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+<script src="../../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+<!-- Argon JS -->
+<script src="../../assets/js/argon.js?v=1.2.0"></script>

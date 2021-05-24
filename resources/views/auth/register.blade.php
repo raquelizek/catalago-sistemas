@@ -80,6 +80,9 @@
                                 <button type="submit" class="btn btn-dark">
                                     {{ __('Registrar') }}
                                 </button>
+                                
+
+                                
                             </div>
                         </div>
                     </form>

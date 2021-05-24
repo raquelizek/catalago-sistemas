@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-Dashboard
+Consultar Sistemas
 @endsection
 
 
@@ -28,7 +28,7 @@ Dashboard
                             <span class="nav-link-text">Página Inicial</span>
                         </a>
                     </li>
-                    <li class="nav-item"> 
+                    <li class="nav-item">
                         <a class="nav-link" href="/consultar">
                             <i class="fas fa-chalkboard text-blue"></i>
                             <span class="nav-link-text">Consultar Sistemas</span>
@@ -41,7 +41,7 @@ Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="examples/dashboard.html">
+                        <a class="nav-link" href="#!">
                             <i class="fas fa-server text-primary"></i>
                             <span class="nav-link-text">Servidor IDEOP</span>
                         </a>
@@ -91,9 +91,6 @@ Dashboard
         </div>
     </div>
 </nav>
-
-
-
 <div class="main-content" id="panel">
     <!-- Topnav -->
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-white border-bottom">
@@ -136,7 +133,7 @@ Dashboard
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="media align-items-center">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="assets/img/theme/usuarios-1.png">
+                                    <img alt="Image placeholder" src="../../assets/img/theme/usuarios-1.png">
                                 </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm text-dark font-weight-bold">Usuário Administrador</span>
@@ -168,85 +165,71 @@ Dashboard
     </nav>
 </div>
 
-<!-- Header -->
-<!-- Header -->
 <hr class="my-0">
 <br>
-<div class="container">
-    <!-- Card stats -->
-    <div class="row justify-content-md-center">
-        <div class="col-lg-3 col-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col ">
-                            <h5 class="card-title text-uppercase text-muted mb-0 ">Sistemas para <br> Migrar</h5>
-                            <span class="h2 font-weight-bold mb-0">150</span>
-                        </div>
-                        <div class="col-auto">
-                            <div class="fas fa-shield-alt">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sistemas em <br> Atenção</h5>
-                            <span class="h2 font-weight-bold mb-0">44</span>
-                        </div>
-                        <div class="col-auto">
-                            <div class="fas fa-lightbulb">
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sistemas <br> Urgentes</h5>
-                            <span class="h2 font-weight-bold mb-0">24</span>
-                        </div>
-                        <div class="col-auto">
-                            <div class="fas fa-exclamation-triangle ">
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header"class="card-title text-uppercase text-default mb-0 "><h3>Cadastar novos sistemas</h3></div>
+            <br>
+            <div class="card-body">
+                <form>
                     <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sistemas <br> Migrados</h5>
-                            <span class="h2 font-weight-bold mb-0">49,65%</span>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            </div>
                         </div>
-                        <div class="col-auto">
-                            <div class="fas fa-thumbs-up  rounded-circle shadow">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" placeholder="Regular" class="form-control" disabled />
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                                    </div>
+                                    <input class="form-control" placeholder="Search" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="input-group mb-4">
+                                    <input class="form-control" placeholder="Birthday" type="text">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group has-success">
+                                <input type="text" placeholder="Success" class="form-control is-valid" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group has-danger">
+                                <input type="email" placeholder="Error Input" class="form-control is-invalid" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
+
+
+
 
 
 

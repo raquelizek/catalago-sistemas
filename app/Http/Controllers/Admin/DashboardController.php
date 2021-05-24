@@ -11,12 +11,14 @@ class DashboardController extends Controller
     public function registered()
     {
         $users = User::all();
-        return view('admin.register')->with('users', $users);
+        return view('admin.registeru')->with('users', $users);
     }
     public function registeredit (Request $request, $id)
     {
-        $id = User::findOrFail($id);
-        return view('admin.edit');
+        $users = User::findOrFail($id);
+        return view('admin.edit')->with('users', $users);
     }
+
+
 
 }

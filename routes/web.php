@@ -23,7 +23,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 
-Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
@@ -53,8 +52,15 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::get('/dashboard', function () {
 		return view('admin.dashboard');
 	});
+	Route::get('/consultar', function () {
+		return view('admin.consultar');
+	});
+	Route::get('/cadastrar-sistemas', function () {
+		return view('admin.cadastrarsis');
+	});
 
-	Route::get('/registros', 'Admin\DashboardController@registered');
-	Route::get('/registros', [App\Http\Controllers\Admin\DashboardController::class, 'registered'])->name('register');
-	Route::get('/editar/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registeredit'])->name('edit');
+
+	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'registered'])->name('registeru');
+	Route::get('/edit/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registeredit'])->name('edit');
 });
+
