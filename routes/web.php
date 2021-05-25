@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-	return view('welcome');
+	return view('auth.login');
 });
 
 Auth::routes();
@@ -57,6 +57,9 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	});
 	Route::get('/cadastrar-sistemas', function () {
 		return view('admin.cadastrarsis');
+	});
+	Route::get('/info-tec', function () {
+		return view('admin.cadastrotec');
 	});
 
 

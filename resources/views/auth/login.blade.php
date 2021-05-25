@@ -42,11 +42,7 @@
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Lembrar-se') }}
-                                    </label>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -62,6 +58,13 @@
                                         {{ __('Esqueceu a senha?') }}
                                     </a>
                                 @endif
+
+                                
+
+                                <button type="submit" href="{{ route('register') }}" class="btn btn-dark">
+                                    {{ __('Registrar-se') }}
+                                </button>
+                                
                             </div>
                         </div>
                     </form>

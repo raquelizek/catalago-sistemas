@@ -28,22 +28,32 @@ Dashboard
                             <span class="nav-link-text">Página Inicial</span>
                         </a>
                     </li>
-                    <li class="nav-item"> 
-                        <a class="nav-link" href="/consultar">
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                             <i class="fas fa-chalkboard text-blue"></i>
-                            <span class="nav-link-text">Consultar Sistemas</span>
+                            <span class="nav-link-text">Sistemas</span>
                         </a>
+
+                        <div class="collapse" id="navbar-examples">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/cadastrar-sistemas">
+                                        Catálogo de Sistemas
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/consultar">
+                                        Gestão de Sistemas
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="/usuarios-registrados">
                             <i class="fas fa-chalkboard-teacher text-orange"></i>
                             <span class="nav-link-text">Permissões</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="examples/dashboard.html">
-                            <i class="fas fa-server text-primary"></i>
-                            <span class="nav-link-text">Servidor IDEOP</span>
                         </a>
                     </li>
                 </ul>
@@ -170,83 +180,111 @@ Dashboard
 
 <!-- Header -->
 <!-- Header -->
+
+
+
+
 <hr class="my-0">
 <br>
 <div class="container">
     <!-- Card stats -->
-    <div class="row justify-content-md-center">
-        <div class="col-lg-3 col-6">
-            <div class="card card-stats">
-                <!-- Card body -->
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col ">
-                            <h5 class="card-title text-uppercase text-muted mb-0 ">Sistemas para <br> Migrar</h5>
-                            <span class="h2 font-weight-bold mb-0">150</span>
-                        </div>
-                        <div class="col-auto">
-                            <div class="fas fa-shield-alt">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sistemas em <br> Atenção</h5>
-                            <span class="h2 font-weight-bold mb-0">44</span>
-                        </div>
-                        <div class="col-auto">
-                            <div class="fas fa-lightbulb">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sistemas <br> Urgentes</h5>
-                            <span class="h2 font-weight-bold mb-0">24</span>
-                        </div>
-                        <div class="col-auto">
-                            <div class="fas fa-exclamation-triangle ">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card card-stats">
-                <!-- Card body -->
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Sistemas <br> Migrados</h5>
+                            <h3 class="card-title text-uppercase text-default mb-0 ">Sistemas Urgentes</h3>
+                            <hr class="my-0">
                             <span class="h2 font-weight-bold mb-0">49,65%</span>
                         </div>
                         <div class="col-auto">
-                            <div class="fas fa-thumbs-up  rounded-circle shadow">
+                            <div class="fas fa-exclamation-triangle">
                             </div>
+                        </div>
+                        <br>
+                        <h4 class="card-text  text-muted mb-0 "><br>Clique no botão abaixo para acessar os sistemas que são urgentes.</h4>
+                        <div>
+                            <br><a href="/cadastrar-sistemas" class="btn btn-outline-primary">Consultar</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col ">
+                            <h3 class="card-title text-uppercase text-default mb-0 ">Sistemas em atenção</h3>
+                            <hr class="my-0">
+                            <span class="h2 font-weight-bold mb-0">49,65%</span>
+                        </div>
+                        <div class="col-auto">
+                            <div class="fas fa-lightbulb">
+                            </div>
+                        </div>
+                        <br>
+                        <h4 class="card-text  text-muted mb-0 "><br>Clique no botão abaixo para acessar os sistemas em atenção.</h4>
+                        <div>
+                            <br><a href="#" class="btn btn-outline-primary">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col ">
+                            <h3 class="card-title text-uppercase text-default mb-0 ">Sistemas Migrados</h3>
+                            <hr class="my-0">
+                            
+                            <span class="h2 font-weight-bold mb-0">49,65%</span>
+                        </div>
+                        <div class="col-auto">
+                            <div class="fas fa-thumbs-up">
+                            </div>
+                        </div>
+                        <br>
+                        <h4 class="card-text  text-muted mb-0 "><br>Clique no botão abaixo para visualizar os sistemas migrados.</h4>
+                        <div>
+                            <br><a href="#" class="btn btn-outline-primary">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col ">
+                            <h3 class="card-title text-uppercase text-default mb-0 ">Sistemas para migração</h3>
+                            <hr class="my-0">
+                            <span class="h2 font-weight-bold mb-0">49,65%</span>
+                        </div>
+                        <div class="col-auto">
+                            <div class="fas fa-trash-alt">
+                            </div>
+                        </div>
+                        <br>
+                        <h4 class="card-text  text-muted mb-0 "><br>Clique no botão abaixo para visualizar os sistemas a serem migrados.</h4>
+                        <div>
+                            <br><a href="#" class="btn btn-outline-primary">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
+
+        
+       
 
 
 

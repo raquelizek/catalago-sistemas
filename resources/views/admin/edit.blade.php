@@ -30,10 +30,25 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="examples/icons.html">
+                        <a class="nav-link " href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                             <i class="fas fa-chalkboard text-blue"></i>
-                            <span class="nav-link-text">Consultar Sistemas</span>
+                            <span class="nav-link-text">Sistemas</span>
                         </a>
+
+                        <div class="collapse" id="navbar-examples">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/cadastrar-sistemas">
+                                        Catálogo de Sistemas
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/consultar">
+                                        Gestão de Sistemas
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="/registros">
@@ -41,12 +56,7 @@
                             <span class="nav-link-text">Permissões</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="examples/dashboard.html">
-                            <i class="fas fa-server text-primary"></i>
-                            <span class="nav-link-text">Servidor IDEOP</span>
-                        </a>
-                    </li>
+                    
                 </ul>
                 <!-- Divider -->
                 <hr class="my-3">
@@ -202,7 +212,11 @@
             </div>
         </div>
     </div>
+    
 </div>
+
+
+
 
 
 <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>

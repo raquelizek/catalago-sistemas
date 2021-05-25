@@ -184,175 +184,204 @@ Consultar Sistemas
 
 <div class="row justify-content-center">
     <div class="col-md-8">
+
         <div class="card">
+
             <div class="card-header" class="card-title text-uppercase text-default mb-0 ">
-                <h2 class="card-title text-uppercase text-default mb-0 ">Cadastar novos sistemas</h2>
+                <h2 class="card-title text-uppercase text-default mb-0 ">Adicionar Informações Técnicas</h2>
                 <br>
                 <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
 
             </div>
             <div class="card-body">
                 <div class="row justify-content-center align-items-center ">
-                    <h3>Informações da Aréa de negócio</h3>
+                    <h3>Informações Técnicas</h3>
                 </div>
                 <hr class="my-3">
                 <br>
                 <form>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-name">Desenvolvedor</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label class="form-control-label" for="input-name">Atuação</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label class="form-control-label" for="input-name">Autenticação</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label class="form-control-label" for="input-name">Diretoria (Sigla)</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-name">Sistema (Nome)</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-control-label" for="input-name">Sistema (Sigla)</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-name">Endereço</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-name">DNS</label>
-                                <div class="custom-control custom-radio mb-3">
-                                    <input name="custom-radio-2" class="custom-control-input" id="customRadio5" type="radio">
-                                    <label class="custom-control-label" for="customRadio5">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio mb-3">
-                                    <input name="custom-radio-2" class="custom-control-input" id="customRadio6" type="radio">
-                                    <label class="custom-control-label" for="customRadio6">Não</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-name">PDTI</label>
-
-                                <div class="custom-control custom-radio mb-3">
-                                    <input name="custom-radio-2" class="custom-control-input" id="customRadio7" type="radio">
-                                    <label class="custom-control-label" for="customRadio7">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio mb-3">
-                                    <input name="custom-radio-2" class="custom-control-input" id="customRadio8" type="radio">
-                                    <label class="custom-control-label" for="customRadio8">Não</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-name">Gestor de Acesso Central</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-control-label" for="input-name">Gestor de Sistemas</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-name">Gestor de Negócio Titular</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-control-label" for="input-name">SIAPE</label> <!-- siape vai ser endereço unico siape 1 -->
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">  
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-name">Gestor de Negócio Substituto</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group has-black">
-                                <label class="form-control-label" for="input-name">SIAPE</label> <!-- siape vai ser endereço unico siape 2 -->
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group focused">
-                                <label class="form-control-label" for="input-name">Gestor de Informação Titular</label>
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group has-black">
-                                <label class="form-control-label" for="input-name">SIAPE</label>  <!-- siape vai ser endereço unico siape 3 -->
-                                <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Possui processos gerados no SEI?</label>
+                                    <label class="form-control-label" for="input-name">Ambiente Atual da Hospedagem</label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Linguagem/Versão</label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-name">Framework</label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Tipo de Banco de Dados/Versão</label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Nome do Banco</label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-name">IP Hospedagem da Aplicação</label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">IP Hospedagem do Banco</label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Possui integração com outros sistemas?</label>
+
+                                    <div class="custom-control custom-radio mb-3">
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
+                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+
+                                    </div>
+                                    <div class="custom-control custom-radio mb-3 ">
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
+                                        <label class="custom-control-label" for="customRadio8">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-name">Sistemas Integrados</label>
+                                    <input type="text" class="form-control" disabled />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Possui integração com outros sistemas?</label>
 
                                     <div class="custom-control custom-radio mb-3">
                                         <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
                                         <label class="custom-control-label" for="customRadio7">Sim</label>
                                     </div>
                                     <div class="custom-control custom-radio mb-3 ">
-                                        <input name="custom-radio-2" class="custom-control-input" id="customRadio6" type="radio">
-                                        <label class="custom-control-label" for="customRadio6">Não</label>
+
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
+                                        <label class="custom-control-label" for="customRadio8">Não</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-name">Número do Processo</label>
+                                    <label class="form-control-label" for="input-name">Sistemas Integrados</label>
+                                    <input type="text" class="form-control" disabled />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Possui integração com outros bancos de dados?</label>
+
+                                    <div class="custom-control custom-radio mb-3">
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
+                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mb-3 ">
+
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
+                                        <label class="custom-control-label" for="customRadio8">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-name">Banco de Dados Integrados</label>
+                                    <input type="text" class="form-control" disabled />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Possui integração com outras base de dados?</label>
+
+                                    <div class="custom-control custom-radio mb-3">
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
+                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mb-3 ">
+
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
+                                        <label class="custom-control-label" for="customRadio8">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-name">Base de Dados Integrados</label>
                                     <input type="text" class="form-control" disabled />
                                 </div>
                             </div>
                         </div>
-                    <div class="row">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Possui integração com outros serviços?</label>
+
+                                    <div class="custom-control custom-radio mb-3">
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
+                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mb-3 ">
+
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
+                                        <label class="custom-control-label" for="customRadio8">Não</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-name">Serviços Integrados</label>
+                                    <input type="text" class="form-control" disabled />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Endereço no GITINSS</label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Autenticação</label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                         <div class="col-md-12 md-8">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="input-name">Observação</label>
@@ -360,19 +389,12 @@ Consultar Sistemas
                             </div>
                         </div>
                     </div>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-</div>
-
-
-
-
-
-
-
 
 
 @endsection
