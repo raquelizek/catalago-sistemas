@@ -37,7 +37,7 @@ Dashboard
                         <div class="collapse" id="navbar-examples">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/cadastrar-sistemas">
+                                    <a class="nav-link" href="/consultar">
                                         Catálogo de Sistemas
                                     </a>
                                 </li>

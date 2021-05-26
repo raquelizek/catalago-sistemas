@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-Consultar Sistemas
+Dashboard
 @endsection
 
 
@@ -37,7 +37,7 @@ Consultar Sistemas
                         <div class="collapse" id="navbar-examples">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/cadastrar-sistemas">
+                                    <a class="nav-link" href="/consultar">
                                         Catálogo de Sistemas
                                     </a>
                                 </li>
@@ -50,7 +50,7 @@ Consultar Sistemas
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="/usuarios-registrados">
+                        <a class="nav-link" href="usuarios-registrados">
                             <i class="fas fa-chalkboard-teacher text-orange"></i>
                             <span class="nav-link-text">Permissões</span>
                         </a>
@@ -101,6 +101,9 @@ Consultar Sistemas
         </div>
     </div>
 </nav>
+
+
+
 <div class="main-content" id="panel">
     <!-- Topnav -->
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-white border-bottom">
@@ -143,7 +146,7 @@ Consultar Sistemas
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="media align-items-center">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="../../assets/img/theme/usuarios-1.png">
+                                    <img alt="Image placeholder" src="assets/img/theme/usuarios-1.png">
                                 </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm text-dark font-weight-bold">Usuário Administrador</span>
@@ -174,327 +177,43 @@ Consultar Sistemas
         </div>
     </nav>
 </div>
-
 <hr class="my-0">
 <br>
 
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header" class="card-title text-uppercase text-default mb-0 ">
+                    <h2 class="card-title text-uppercase text-default mb-0 ">Consulta de Sistemas</h2>
+                    <br>
+                    <div class="col-7 text-left">
+                        <a href="cadastrar-sistemas" class="btn btn-sm btn-outline-info text-info">Cadastrar Novo Sistema</a>
+                    </div>
 
-<div class="table-responsive">
-    <table class="table align-items-center">
-    <thead class="thead-light">
-        <tr>
-            <th scope="col">Project</th>
-            <th scope="col">Budget</th>
-            <th scope="col">Status</th>
-            <th scope="col">Users</th>
-            <th scope="col">Completion</th>
-            <th scope="col"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">
-                <div class="media align-items-center">
-                    <a href="#" class="avatar rounded-circle mr-3">
-                      <img alt="Image placeholder" src="../../assets/img/theme/bootstrap.jpg">
-                    </a>
-                    <div class="media-body">
-                        <span class="mb-0 text-sm">Argon Design System</span>
+                </div>
+                <div class="card-body">
+                    <div class="row justify-content-center align-items-center">
+                        <h3>Sistemas Cadastrados</h3>
+                    </div>
+                    <br>
+                    <div class="table-responsive ">
+                        <table class="table">
+                            <thead class=" text-black">
+                                <th>Nome do Sistema</th>
+                                <th>Endereço do Sistema</th>
+                                <th>Abrangência</th>
+                                <th>Área Demandante</th>
+                                <th><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></th>
+                                <th><a href="#" class="badge badge-info">Processo do SEI</a></th>
+                            </thead>
+                        </table>
                     </div>
                 </div>
-            </th>
-            <td>
-                $2,500 USD
-            </td>
-            <td>
-                <span class="badge badge-dot mr-4">
-                  <i class="bg-warning"></i> pending
-                </span>
-            </td>
-            <td>
-                <div class="avatar-group">
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-  </a>
+            </div>
+        </div>
+    </div>
 </div>
-
-            </td>
-            <td>
-                <div class="d-flex align-items-center">
-                    <span class="mr-2">60%</span>
-                    <div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td class="text-right">
-                <div class="dropdown">
-                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">
-                <div class="media align-items-center">
-                    <a href="#" class="avatar rounded-circle mr-3">
-                      <img alt="Image placeholder" src="../../assets/img/theme/angular.jpg">
-                    </a>
-                    <div class="media-body">
-                        <span class="mb-0 text-sm">Angular Now UI Kit PRO</span>
-                    </div>
-                </div>
-            </th>
-            <td>
-                $1,800 USD
-            </td>
-            <td>
-                <span class="badge badge-dot">
-                  <i class="bg-success"></i> completed
-                </span>
-            </td>
-            <td>
-                <div class="avatar-group">
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-  </a>
-</div>
-
-            </td>
-            <td>
-                <div class="d-flex align-items-center">
-                    <span class="mr-2">100%</span>
-                    <div>
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td class="text-right">
-                <div class="dropdown">
-                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">
-                <div class="media align-items-center">
-                    <a href="#" class="avatar rounded-circle mr-3">
-                      <img alt="Image placeholder" src="../../assets/img/theme/sketch.jpg">
-                    </a>
-                    <div class="media-body">
-                        <span class="mb-0 text-sm">Black Dashboard</span>
-                    </div>
-                </div>
-            </th>
-            <td>
-                $3,150 USD
-            </td>
-            <td>
-                <span class="badge badge-dot mr-4">
-                  <i class="bg-danger"></i> delayed
-                </span>
-            </td>
-            <td>
-                <div class="avatar-group">
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-  </a>
-</div>
-
-            </td>
-            <td>
-                <div class="d-flex align-items-center">
-                    <span class="mr-2">72%</span>
-                    <div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" style="width: 72%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td class="text-right">
-                <div class="dropdown">
-                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">
-                <div class="media align-items-center">
-                    <a href="#" class="avatar rounded-circle mr-3">
-                      <img alt="Image placeholder" src="../../assets/img/theme/react.jpg">
-                    </a>
-                    <div class="media-body">
-                        <span class="mb-0 text-sm">React Material Dashboard</span>
-                    </div>
-                </div>
-            </th>
-            <td>
-                $4,400 USD
-            </td>
-            <td>
-                <span class="badge badge-dot">
-                  <i class="bg-info"></i> on schedule
-                </span>
-            </td>
-            <td>
-                <div class="avatar-group">
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-  </a>
-</div>
-
-            </td>
-            <td>
-                <div class="d-flex align-items-center">
-                    <span class="mr-2">90%</span>
-                    <div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td class="text-right">
-                <div class="dropdown">
-                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">
-                <div class="media align-items-center">
-                    <a href="#" class="avatar rounded-circle mr-3">
-                      <img alt="Image placeholder" src="../../assets/img/theme/vue.jpg">
-                    </a>
-                    <div class="media-body">
-                        <span class="mb-0 text-sm">Vue Paper UI Kit PRO</span>
-                    </div>
-                </div>
-            </th>
-            <td>
-                $2,200 USD
-            </td>
-            <td>
-                <span class="badge badge-dot mr-4">
-                  <i class="bg-success"></i> completed
-                </span>
-            </td>
-            <td>
-                <div class="avatar-group">
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Ryan Tompson">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-1-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Romina Hadid">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-2-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Alexander Smith">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-3-800x800.jpg" class="rounded-circle">
-  </a>
-    <a href="#" class="avatar avatar-sm" data-toggle="tooltip" data-original-title="Jessica Doe">
-      <img alt="Image placeholder" src="../../assets/img/theme/team-4-800x800.jpg" class="rounded-circle">
-  </a>
-</div>
-
-            </td>
-            <td>
-                <div class="d-flex align-items-center">
-                    <span class="mr-2">100%</span>
-                    <div>
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td class="text-right">
-                <div class="dropdown">
-                    <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-</div>
-
-
-
-
 
 
 
