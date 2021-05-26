@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-Consultar Sistemas
+Informações Técnicas
 @endsection
 
 

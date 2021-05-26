@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-Dashboard
+Consultar Sistemas
 @endsection
 
 
@@ -182,7 +182,7 @@ Dashboard
 
 <div class="container">
     <div class="row justify-content-md-center">
-        <div class="col-md-14">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header" class="card-title text-uppercase text-default mb-0 ">
                     <h2 class="card-title text-uppercase text-default mb-0 ">Consulta de Sistemas</h2>
@@ -200,12 +200,13 @@ Dashboard
                     <div class="table-responsive ">
                         <table class="table">
                             <thead class=" text-black">
-                                <th>Nome do Sistema</th>
-                                <th>Endereço do Sistema</th>
-                                <th>Abrangência</th>
-                                <th>Área Demandante</th>
-                                <th>Informações Técnicas</th>
-                                <th>SEI</th>
+                                <th><b>Nome do Sistema</b></th>
+                                <th><b>Endereço do Sistema</b></th>
+                                <th><b>Abrangência</b></th>
+                                <th><b>Área Demandante</b></th>
+                                <th><b>Status</b></th>
+                                <th><b>Informações Técnicas</b></th>
+                                <th><b>SEI</b></th>
                                 
                             </thead>
                             <tbody>
@@ -213,6 +214,7 @@ Dashboard
                                 <td>http://www-cmcweb/FrmLogin.asp</td>
                                 <td>Internet</td>
                                 <td>DIRBEN</td>
+                                <td></td>
                                 <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
                                 <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
                                 
@@ -221,6 +223,7 @@ Dashboard
                                 <td>Modelo de Capas de Processos</td>
                                 <td>http://www-inss.prevnet/docs/capa-de-processos.php</td>
                                 <td>Internet</td>
+                                <td></td>
                                 <td></td>
                                 <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
                                 <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
@@ -231,6 +234,7 @@ Dashboard
                                 <td>https://geridinss.dataprev.gov.br/cas/</td>
                                 <td>Internet</td>
                                 <td>DIRBEN</td>
+                                <td></td>
                                 <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
                                 <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
                                 
@@ -240,33 +244,7 @@ Dashboard
                                 <td>https://geridinss.dataprev.gov.br/cas/</td>
                                 <td>Internet</td>
                                 <td>DIRBEN</td>
-                                <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
-                                <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
-                                
-                            </tbody>
-                            <tbody>
-                                <td>Comunicação de Acidente de Trabalho</td>
-                                <td>https://geridinss.dataprev.gov.br/cas/</td>
-                                <td>Internet</td>
-                                <td>DIRBEN</td>
-                                <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
-                                <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
-                                
-                            </tbody>
-                            <tbody>
-                                <td>Comunicação de Acidente de Trabalho</td>
-                                <td>https://geridinss.dataprev.gov.br/cas/</td>
-                                <td>Internet</td>
-                                <td>DIRBEN</td>
-                                <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
-                                <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
-                                
-                            </tbody>
-                            <tbody>
-                                <td>Comunicação de Acidente de Trabalho</td>
-                                <td>https://geridinss.dataprev.gov.br/cas/</td>
-                                <td>Internet</td>
-                                <td>DIRBEN</td>
+                                <td></td>
                                 <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
                                 <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
                                 

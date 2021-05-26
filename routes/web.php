@@ -65,5 +65,8 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
 	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'registered'])->name('registeru');
 	Route::get('/edit/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registeredit'])->name('edit');
+	Route::put('/usuarios-salvo/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerupdate']);
+	
+	
 });
 

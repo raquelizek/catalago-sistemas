@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../../assets/css/argon.css?v=1.2.0" type="text/css">
 
 <!-- Sidenav -->
-<title>Editar Permissões</title>
+<title>Editar Usuário</title>
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
         <!-- Brand -->
@@ -51,12 +51,12 @@
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="/registros">
+                        <a class="nav-link" href="/usuarios-registrados">
                             <i class="fas fa-chalkboard-teacher text-orange"></i>
                             <span class="nav-link-text">Permissões</span>
                         </a>
                     </li>
-                    
+
                 </ul>
                 <!-- Divider -->
                 <hr class="my-3">
@@ -185,34 +185,39 @@
 <br>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Editar Permissões de Usuário</h3>
-                </div>
-                <div class="card-body">
-                    <form action="">
-                        <div class="form-group" >
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h3>Editar Permissões de Usuário</h3>
+            </div>
+            <div class="card-body">
+
+                <form action="/usuarios-salvo/{{$users->id}}" method="post">
+                {{csrf_field() }}
+                {{method_field('put') }}
+                    <div class="row">
+                        <div class="form-group col-md-5">
                             <label>Nome</label>
                             <input type="text" class="form-control" name="name" value="{{ $users->name }}">
                         </div>
-                        <div class="form-group" class="form-control">
+                        <div class="form-group col-md-5">
                             <label>Tipo de Usuário</label>
                             <br>
-                            <select class="form-select form-select-sm" aria-label=".form-select-sm" name="usertype">
+                            <select class="form-control" name="usertype">
                                 <option value="admin">Administrador</option>
                                 <option value="user">Usuário Comum</option>
                             </select>
                         </div>
-                      
-                        <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
-                    </form>
-                </div>
+                    </div>
+                    <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
+                    <a href="/usuarios-registrados" class="btn btn-outline-danger">Cancelar</a>
+                </form>
             </div>
         </div>
     </div>
-    
+</div>
+
 </div>
 
 
