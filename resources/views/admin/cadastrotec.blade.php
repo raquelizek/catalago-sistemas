@@ -279,13 +279,13 @@ Consultar Sistemas
                                     <label class="form-control-label" for="input-name">Possui integração com outros sistemas?</label>
 
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
-                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio9" type="radio">
+                                        <label class="custom-control-label" for="customRadio9">Sim</label>
                                     </div>
                                     <div class="custom-control custom-radio mb-3 ">
 
-                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
-                                        <label class="custom-control-label" for="customRadio8">Não</label>
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio10" type="radio">
+                                        <label class="custom-control-label" for="customRadio10">Não</label>
                                     </div>
                                 </div>
                             </div>
@@ -303,13 +303,13 @@ Consultar Sistemas
                                     <label class="form-control-label" for="input-name">Possui integração com outros bancos de dados?</label>
 
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
-                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio11" type="radio">
+                                        <label class="custom-control-label" for="customRadio11">Sim</label>
                                     </div>
                                     <div class="custom-control custom-radio mb-3 ">
 
-                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
-                                        <label class="custom-control-label" for="customRadio8">Não</label>
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio12" type="radio">
+                                        <label class="custom-control-label" for="customRadio12">Não</label>
                                     </div>
                                 </div>
                             </div>
@@ -327,13 +327,13 @@ Consultar Sistemas
                                     <label class="form-control-label" for="input-name">Possui integração com outras base de dados?</label>
 
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
-                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio13" type="radio">
+                                        <label class="custom-control-label" for="customRadio13">Sim</label>
                                     </div>
                                     <div class="custom-control custom-radio mb-3 ">
 
-                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
-                                        <label class="custom-control-label" for="customRadio8">Não</label>
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio14" type="radio">
+                                        <label class="custom-control-label" for="customRadio14">Não</label>
                                     </div>
                                 </div>
                             </div>
@@ -350,13 +350,13 @@ Consultar Sistemas
                                     <label class="form-control-label" for="input-name">Possui integração com outros serviços?</label>
 
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
-                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio15" type="radio">
+                                        <label class="custom-control-label" for="customRadio15">Sim</label>
                                     </div>
                                     <div class="custom-control custom-radio mb-3 ">
 
-                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
-                                        <label class="custom-control-label" for="customRadio8">Não</label>
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio16" type="radio">
+                                        <label class="custom-control-label" for="customRadio16">Não</label>
                                     </div>
                                 </div>
                             </div>
