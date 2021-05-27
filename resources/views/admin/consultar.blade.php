@@ -259,9 +259,27 @@ Consultar Sistemas
 
 
 
+<style>
 
+/* min-width & max-width */
+@media screen and (max-width: 900px) {
+	.container {
+		margin-left: 20% !important;
+	}
+}
+
+/* min-width & max-width */
+@media screen and (max-width: 2560px) {
+	.container {
+		margin-left: 20% !important;
+	}
+}
+
+</style>
 @endsection
 
 @section('scripts')
 
+
 @endsection
+
