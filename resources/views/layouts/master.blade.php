@@ -19,12 +19,12 @@
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="/assets/css/argon.css?v=1.2.0" type="text/css">
-    
+
 </head>
 
 <body>
 
-@yield('content')
+    @yield('content')
 
     @yield('script')
 
@@ -40,25 +40,16 @@
     <script src="/assets/vendor/chart.js/dist/Chart.extension.js"></script>
     <!-- Argon JS -->
     <script src="/assets/js/argon.js?v=1.2.0"></script>
-    
+
 </body>
 
 <style>
-
-/* min-width & max-width */
-@media screen and (max-width: 900px) {
-	.container {
-		margin-left: 20% !important;
-	}
-}
-
-/* min-width & max-width */
-@media screen and (max-width: 2560px) {
-	.container {
-		margin-left: 20% !important;
-	}
-}
-
+    /* min-width & max-width */
+    @media screen and (max-width: 900px) {
+        .container {
+            margin-left: 20% !important;
+        }
+    }
 </style>
 
 

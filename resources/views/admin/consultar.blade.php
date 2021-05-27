@@ -180,9 +180,9 @@ Consultar Sistemas
 <hr class="my-0">
 <br>
 
-<div class="container">
-    <div class="row justify-content-md-center">
-        <div class="col-md-12">
+<div class="container-fluid-mt--6">
+    <div class="row justify-content-center">
+        <div class="col">
             <div class="card">
                 <div class="card-header" class="card-title text-uppercase text-default mb-0 ">
                     <h2 class="card-title text-uppercase text-default mb-0 ">Consulta de Sistemas</h2>
@@ -259,23 +259,7 @@ Consultar Sistemas
 
 
 
-<style>
 
-/* min-width & max-width */
-@media screen and (max-width: 900px) {
-	.container {
-		margin-left: 20% !important;
-	}
-}
-
-/* min-width & max-width */
-@media screen and (max-width: 2560px) {
-	.container {
-		margin-left: 20% !important;
-	}
-}
-
-</style>
 @endsection
 
 @section('scripts')

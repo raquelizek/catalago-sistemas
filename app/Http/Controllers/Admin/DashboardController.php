@@ -13,7 +13,7 @@ class DashboardController extends Controller
         $users = User::all();
         return view('admin.registeru')->with('users', $users);
     }
-    public function registeredit (Request $request, $id)
+    public function registeredit(Request $request, $id)
     {
         $users = User::findOrFail($id);
         return view('admin.edit')->with('users', $users);
@@ -25,7 +25,13 @@ class DashboardController extends Controller
         $users->name = $request->input('username');
         $users->usertype = $request->input('usertype');
         $users->update();
-        return redirect('/usuarios-registrados')->with('sucess', 'Usuário alterado com sucesso.');
+        return redirect('/usuarios-registrados')->with('status', 'Usuário alterado com sucesso.');
     }
 
+    public function registerdelete(Request $request, $id)
+    {
+        $users = User::findOrFail($id);
+        $users->delete();
+        return redirect('/usuarios-registrados')->with('status', 'Usuário excluído com sucesso.');
+    }
 }

@@ -7,15 +7,7 @@ Editar Permissões
 
 @section('content')
 
-<div class="card-body">
-    @if (session('status'))
-    <div class="alert alert-danger" role="alert">
-        {{ session('status') }}
-    </div>
-    @endif
 
-    {{ __('Sessão iniciada com sucesso.') }}
-</div>
 
 <!-- Sidenav -->
 <title>Editar Usuário</title>
@@ -203,13 +195,13 @@ Editar Permissões
             </div>
             <div class="card-body">
 
-                <form action="/usuarios-salvo/{{$users->id}}" method="post">
+                <form action="/usuarios-registrados/{{$users->id}}" method="post">
                     {{csrf_field() }}
                     {{method_field('put') }}
                     <div class="row">
                         <div class="form-group col-md-5">
                             <label>Nome</label>
-                            <input type="text" class="form-control" name="name" value="{{ $users->name }}">
+                            <input type="text" class="form-control" name="username" value="{{ $users->name }}">
                         </div>
                         <div class="form-group col-md-5">
                             <label>Tipo de Usuário</label>

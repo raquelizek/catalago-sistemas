@@ -55,7 +55,7 @@ Editar Permissões
                             <span class="nav-link-text">Permissões</span>
                         </a>
                     </li>
-                    
+
                 </ul>
                 <!-- Divider -->
                 <hr class="my-3">
@@ -185,6 +185,13 @@ Editar Permissões
         <div class="col-md-11">
             <div class="card">
                 <div class="card-header "> Usuários Registrados </div>
+                @if (session('status'))
+                <div class="alert alert-primary" role="alert">
+                    {{ session('status') }}
+                </div>
+                @endif
+
+                
                 <div class="card-body">
                     <div class="table-responsive ">
                         <table class="table">
@@ -210,7 +217,9 @@ Editar Permissões
                                         <a href="/edit/{{ $row->id }}" button type="button" class="btn btn-outline-primary">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="/excluir-registro/ {{ $row->id }}" method="post">
+                                        <form action="/usuarios-deletados/ {{ $row->id }}" method="post">
+                                            {{csrf_field()}}
+                                            {{method_field('delete')}}
                                             <button type="submit" class="btn btn-outline-danger">Excluir</button>
                                         </form>
                                     </td>
