@@ -1,22 +1,28 @@
 @extends('layouts.master')
 
 @section('title')
-Editar Permissões
+Consultar Sistemas
 @endsection
 
 
 @section('content')
 
+@extends('layouts.master')
 
+@section('title')
+Consultar Sistemas
+@endsection
+
+
+@section('content')
 
 <!-- Sidenav -->
-<title>Editar Usuário</title>
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="/dashboard">
-                <img src="../../assets/img/brand/inss-logo-4.png" class="navbar-brand-img" alt="..."> <br>
+                <img src="assets/img/brand/inss-logo-4.png" class="navbar-brand-img" alt="..."> <br>
                 Catálogo de Sistemas
             </a>
         </div>
@@ -53,7 +59,7 @@ Editar Permissões
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="/usuarios-registrados">
+                        <a class="nav-link" href="usuarios-registrados">
                             <i class="fas fa-chalkboard-teacher text-orange"></i>
                             <span class="nav-link-text">Permissões</span>
                         </a>
@@ -149,7 +155,7 @@ Editar Permissões
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="media align-items-center">
                                 <span class="avatar avatar-sm rounded-circle">
-                                    <img alt="Image placeholder" src="../../assets/img/theme/usuarios-1.png">
+                                    <img alt="Image placeholder" src="assets/img/theme/usuarios-1.png">
                                 </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm text-dark font-weight-bold">Usuário Administrador</span>
@@ -180,40 +186,76 @@ Editar Permissões
         </div>
     </nav>
 </div>
-
-<!-- Header -->
-<!-- Header -->
 <hr class="my-0">
 <br>
-
 <div class="container">
-
-    <div class="col-md-12">
+    <div class="row justify-content-center">
         <div class="card">
             <div class="card-header">
-                <h3>Editar Permissões de Usuário</h3>
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h3 class="mb-0">Editar Perfil</h3>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="#!" class="btn btn-sm btn-outline-primary">Salvar</a>
+                    </div>
+                </div>
             </div>
             <div class="card-body">
-
-                <form action="/usuarios-registrados/{{$users->id}}" method="post">
-                    {{csrf_field() }}
-                    {{method_field('put') }}
+                <form>
+                    <h6 class="heading-small text-muted mb-4">Informações do Usuário</h6>
+                    <div class="pl-lg-4">
                     <div class="row">
-                        <div class="form-group col-md-5">
-                            <label>Nome</label>
-                            <input type="text" class="form-control" name="username" value="{{ $users->name }}">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-first-name">Nome</label>
+                                    <input type="text" id="input-first-name" class="form-control">
+                                </div>
+                            </div>
+                           
                         </div>
-                        <div class="form-group col-md-5">
-                            <label>Tipo de Usuário</label>
-                            <br>
-                            <select class="form-control" name="usertype">
-                                <option value="admin">Administrador</option>
-                                <option value="user">Usuário Comum</option>
-                            </select>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-username">Email</label>
+                                    <input type="text" id="input-username" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-email">Telefone</label>
+                                    <input type="email" id="input-email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr class="my-4" />
+                    <!-- Address -->
+                    <h6 class="heading-small text-muted mb-4">Alterar Senha</h6>
+                    <div class="pl-lg-4">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-city">Senha Atual</label>
+                                    <input type="text" id="input-city" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-country">Nova Senha</label>
+                                    <input type="text" id="input-country" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="input-country">Confirmar Nova Senha</label>
+                                    <input type="number" id="input-postal-code" class="form-control">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
-                    <a href="/usuarios-registrados" class="btn btn-outline-danger">Cancelar</a>
+                    
                 </form>
             </div>
         </div>
@@ -221,10 +263,13 @@ Editar Permissões
 </div>
 
 </div>
+</div>
 
+@endsection
 
+@section('scripts')
 
-
+@endsection
 
 @endsection
 

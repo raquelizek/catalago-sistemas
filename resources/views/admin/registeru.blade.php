@@ -157,7 +157,7 @@ Editar Permissões
                             <div class="dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Bem vindo</h6>
                             </div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="/meu-perfil" class="dropdown-item">
                                 <i class="ni ni-settings-gear-65"></i>
                                 <span>Configurações</span>
                             </a>
@@ -182,7 +182,7 @@ Editar Permissões
 
 <div class="container">
     <div class="row justify-content-md-center">
-        <div class="col-md-11">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header "> Usuários Registrados </div>
                 @if (session('status'))

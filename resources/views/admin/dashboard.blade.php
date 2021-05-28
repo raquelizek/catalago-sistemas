@@ -157,7 +157,7 @@ Página Inicial
                             <div class="dropdown-header noti-title">
                                 <h6 class="text-overflow m-0">Bem vindo</h6>
                             </div>
-                            <a href="#!" class="dropdown-item">
+                            <a href="/meu-perfil" class="dropdown-item">
                                 <i class="ni ni-settings-gear-65"></i>
                                 <span>Configurações</span>
                             </a>

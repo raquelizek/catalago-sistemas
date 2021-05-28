@@ -43,14 +43,7 @@
 
 </body>
 
-<style>
-    /* min-width & max-width */
-    @media screen and (max-width: 900px) {
-        .container {
-            margin-left: 20% !important;
-        }
-    }
-</style>
+
 
 
 </html>

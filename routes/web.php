@@ -61,6 +61,9 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::get('/info-tec', function () {
 		return view('admin.cadastrotec');
 	});
+	Route::get('/meu-perfil', function () {
+		return view('admin.profile');
+	});
 
 
 	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'registered'])->name('registeru');
