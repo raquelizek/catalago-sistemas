@@ -331,17 +331,31 @@ Consultar Sistemas
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Gestor da Informação Substituto </label>
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group has-black">
+                                    <label class="form-control-label" for="input-name">SIAPE</label> <!-- siape vai ser endereço unico siape 3 -->
+                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-name">Possui processos gerados no SEI?</label>
 
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
-                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio9" type="radio">
+                                        <label class="custom-control-label" for="customRadio9">Sim</label>
                                     </div>
                                     <div class="custom-control custom-radio mb-3 ">
-                                        <input name="custom-radio-2" class="custom-control-input" id="customRadio6" type="radio">
-                                        <label class="custom-control-label" for="customRadio6">Não</label>
+                                        <input name="custom-radio-2" class="custom-control-input" id="customRadio10" type="radio">
+                                        <label class="custom-control-label" for="customRadio10">Não</label>
                                     </div>
                                 </div>
                             </div>
