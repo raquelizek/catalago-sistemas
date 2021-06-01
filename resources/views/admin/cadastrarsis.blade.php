@@ -350,11 +350,11 @@ Consultar Sistemas
                                     <label class="form-control-label" for="input-name">Possui processos gerados no SEI?</label>
 
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio9" type="radio">
+                                        <input name="custom-radio-9" class="custom-control-input" id="customRadio9" type="radio">
                                         <label class="custom-control-label" for="customRadio9">Sim</label>
                                     </div>
                                     <div class="custom-control custom-radio mb-3 ">
-                                        <input name="custom-radio-2" class="custom-control-input" id="customRadio10" type="radio">
+                                        <input name="custom-radio-10" class="custom-control-input" id="customRadio10" type="radio">
                                         <label class="custom-control-label" for="customRadio10">Não</label>
                                     </div>
                                 </div>
