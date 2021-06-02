@@ -1,2 +1,2 @@
-<img src="/images/catalogosistemas.png" alt="My cool logo"/>
+<img src="/images/catalogosistemas.png"/>
 
