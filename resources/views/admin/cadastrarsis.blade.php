@@ -164,7 +164,7 @@ Consultar Sistemas
                                 <span>Sair</span>
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
+
                             </form>
 
                         </div>
@@ -197,63 +197,64 @@ Consultar Sistemas
                     </div>
                     <hr class="my-3">
                     <br>
-                    <form>
+                    <form action="{{ route('registrarsist') }}" method="post">
+                        @csrf
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Desenvolvedor</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Desenvolvedor</label>
+                                    <input type="text" name="dev" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-name">Atuação</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Atuação</label>
+                                    <input type="text" name="atuacao" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-name">Autenticação</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Autenticação</label>
+                                    <input type="text" name="auth" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-name">Diretoria (Sigla)</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Diretoria (Sigla)</label>
+                                    <input type="text" name="diretsi" class="form-control form-control-alternative">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Sistema (Nome)</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Sistema (Nome)</label>
+                                    <input type="text" name="sistnm" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-name">Sistema (Sigla)</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Sistema (Sigla)</label>
+                                    <input type="text" name="sissig" class="form-control form-control-alternative">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Endereço</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Endereço</label>
+                                    <input type="text" name="endereco" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-name">DNS</label>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-2" class="custom-control-input" id="customRadio5" type="radio">
+                                        <input name="custom-radio-5" class="custom-control-input" id="customRadio5" type="radio">
                                         <label class="custom-control-label" for="customRadio5">Sim</label>
                                     </div>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-2" class="custom-control-input" id="customRadio6" type="radio">
+                                        <input name="custom-radio-6" class="custom-control-input" id="customRadio6" type="radio">
                                         <label class="custom-control-label" for="customRadio6">Não</label>
                                     </div>
                                 </div>
@@ -263,11 +264,11 @@ Consultar Sistemas
                                     <label class="form-control-label" for="input-name">PDTI</label>
 
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-2" class="custom-control-input" id="customRadio7" type="radio">
+                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
                                         <label class="custom-control-label" for="customRadio7">Sim</label>
                                     </div>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-2" class="custom-control-input" id="customRadio8" type="radio">
+                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
                                         <label class="custom-control-label" for="customRadio8">Não</label>
                                     </div>
                                 </div>
@@ -277,75 +278,75 @@ Consultar Sistemas
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Gestor de Acesso Central</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Gestor de Acesso Central</label>
+                                    <input type="text" name="gac" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-name">Gestor de Sistemas</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Gestor de Sistemas</label>
+                                    <input type="text" name="gds" class="form-control form-control-alternative">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Gestor de Negócio Titular</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Gestor de Negócio Titular</label>
+                                    <input type="text" name="gnt" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-name">SIAPE</label> <!-- siape vai ser endereço unico siape 1 -->
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 1 -->
+                                    <input type="text" name="siapegnt" class="form-control form-control-alternative">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Gestor de Negócio Substituto</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Gestor de Negócio Substituto</label>
+                                    <input type="text" name="gns" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group has-black">
-                                    <label class="form-control-label" for="input-name">SIAPE</label> <!-- siape vai ser endereço unico siape 2 -->
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 2 -->
+                                    <input type="text" name="siapegns" class="form-control form-control-alternative">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Gestor de Informação Titular</label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Gestor de Informação Titular</label>
+                                    <input type="text" name="git" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group has-black">
-                                    <label class="form-control-label" for="input-name">SIAPE</label> <!-- siape vai ser endereço unico siape 3 -->
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 3 -->
+                                    <input type="text" name="siapegit" class="form-control form-control-alternative">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Gestor da Informação Substituto </label>
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">Gestor da Informação Substituto </label>
+                                    <input type="text" name="gis" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group has-black">
-                                    <label class="form-control-label" for="input-name">SIAPE</label> <!-- siape vai ser endereço unico siape 3 -->
-                                    <input type="text" name="name" id="input-name" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 3 -->
+                                    <input type="text" name="siapegis" class="form-control form-control-alternative">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-">
+                            <div class="col-md-3">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-name">Possui processos gerados no SEI?</label>
 
@@ -369,8 +370,8 @@ Consultar Sistemas
                         <div class="row">
                             <div class="col-md-12 md-8">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Observação</label>
-                                    <textarea class="form-control form-control-alternative" rows="3" placeholder="Adicione algum comentário aqui."></textarea>
+                                    <label class="form-control-label" for="">Observação</label>
+                                    <textarea class="form-control form-control-alternative" name="obsv" rows="3" placeholder="Adicione algum comentário aqui."></textarea>
                                 </div>
                             </div>
                         </div>
