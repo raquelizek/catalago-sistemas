@@ -191,19 +191,20 @@ Consultar Sistemas
                     <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
 
                 </div>
-                <div class="card-body">
-                    <div class="row justify-content-center align-items-center ">
-                        <h3>Informações da Aréa de negócio</h3>
-                    </div>
-                    <hr class="my-3">
-                    <br>
-                    <form action="{{ route('registrarsist') }}" method="post">
-                        @csrf
+                <form action="/salvarsistema" method="post">
+                    {{ csrf_field() }}
+                    {{method_field('put')}}
+                    <div class="card-body">
+                        <div class="row justify-content-center align-items-center ">
+                            <h3>Informações da Aréa de negócio</h3>
+                        </div>
+                        <hr class="my-3">
+                        <br>
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="">Desenvolvedor</label>
-                                    <input type="text" name="dev" class="form-control form-control-alternative">
+                                    <label class="form-control-label" for="input-dev">Desenvolvedor</label>
+                                    <input type="text" name="dev" id="input-dev" class="form-control form-control-alternative">
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -375,8 +376,8 @@ Consultar Sistemas
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

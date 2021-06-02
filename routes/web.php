@@ -66,7 +66,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
 	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'registered'])->name('registeru');
 	Route::get('/cadastrar-sistemas', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'create']);
-	Route::get('/cadastrar-sistemas', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'store'])->name('registrarsist');
+	Route::post('/salvarsistema', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'store'])->name('registrarsist');
 	Route::get('/edit/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registeredit'])->name('edit');
 	Route::put('/usuarios-registrados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerupdate']);
 	Route::delete('/usuarios-deletados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerdelete']);
