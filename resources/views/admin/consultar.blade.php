@@ -104,13 +104,13 @@ Consultar Sistemas
             </div>
         </nav>
     </div>
-    
+
     <div class="col-md-10">
         <div class="main-content" id="panel">
             <!-- Topnav -->
             <nav class="navbar navbar-top navbar-expand navbar-dark bg-white border-bottom">
                 <div class="container-fluid">
-                
+
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Search form -->
                         <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
@@ -203,54 +203,28 @@ Consultar Sistemas
                             <div class="table-responsive ">
                                 <table class="table">
                                     <thead class=" text-black">
-                                        <th><b>Nome do Sistema</b></th>
-                                        <th><b>Endereço do Sistema</b></th>
-                                        <th><b>Abrangência</b></th>
-                                        <th><b>Área Demandante</b></th>
-                                        <th><b>Status</b></th>
-                                        <th><b>Informações Técnicas</b></th>
-                                        <th><b>SEI</b></th>
-
+                                        <tr>
+                                            <th><b>Nome do Sistema</b></th>
+                                            <th><b>Endereço do Sistema</b></th>
+                                            <th><b>Área Demandante</b></th>
+                                            <th><b>Status</b></th>
+                                            <th><b>Informações Técnicas</b></th>
+                                            <th><b>SEI</b></th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                        <td>Controle de Material de Consumo</td>
-                                        <td>http://www-cmcweb/FrmLogin.asp</td>
-                                        <td>Internet</td>
-                                        <td>DIRBEN</td>
+                                        @foreach($sistemasgestao as $sistemasgt)
+
+                                        <td>{{$sistemasgt->id}}</td>
+                                        <td>{{$sistemasgt->sistnm}}</td>
+                                        <td>{{$sistemasgt->endereco}}</td>>
+                                        <td>{{$sistemasgt->diretsi}}</td>
                                         <td></td>
+                                        
                                         <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
                                         <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
-
-                                    </tbody>
-                                    <tbody>
-                                        <td>Modelo de Capas de Processos</td>
-                                        <td>http://www-inss.prevnet/docs/capa-de-processos.php</td>
-                                        <td>Internet</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
-                                        <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
-
-                                    </tbody>
-                                    <tbody>
-                                        <td>Comunicação de Acidente de Trabalho</td>
-                                        <td>https://geridinss.dataprev.gov.br/cas/</td>
-                                        <td>Internet</td>
-                                        <td>DIRBEN</td>
-                                        <td></td>
-                                        <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
-                                        <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
-
-                                    </tbody>
-                                    <tbody>
-                                        <td>Comunicação de Acidente de Trabalho</td>
-                                        <td>https://geridinss.dataprev.gov.br/cas/</td>
-                                        <td>Internet</td>
-                                        <td>DIRBEN</td>
-                                        <td></td>
-                                        <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
-                                        <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
-
+                                         
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

@@ -204,7 +204,7 @@ Consultar Sistemas
                             <div class="col-md-3">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-dev">Desenvolvedor</label>
-                                    <input type="text" name="dev" id="input-dev" class="form-control form-control-alternative">
+                                    <input type="text" name="dev" id="input-dev" class="form-control form-control-alternative ">
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -341,7 +341,7 @@ Consultar Sistemas
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group has-black">
-                                    <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 3 -->
+                                    <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 4 -->
                                     <input type="text" name="siapegis" class="form-control form-control-alternative">
                                 </div>
                             </div>
