@@ -188,12 +188,13 @@ Consultar Sistemas
                 <div class="card-header" class="card-title text-uppercase text-default mb-0 ">
                     <h2 class="card-title text-uppercase text-default mb-0 ">Cadastar novos sistemas</h2>
                     <br>
-                    <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
-
                 </div>
+
                 <form action="/salvarsistema" method="post">
-                    {{ csrf_field() }}
-                    {{method_field('put')}}
+                    <div class="card-header" class="card-title">
+                        <input type="submit" class="btn btn btn-outline-primary" value="Salvar">
+                    </div>
+                    @csrf
                     <div class="card-body">
                         <div class="row justify-content-center align-items-center ">
                             <h3>Informações da Aréa de negócio</h3>
@@ -204,25 +205,25 @@ Consultar Sistemas
                             <div class="col-md-3">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-dev">Desenvolvedor</label>
-                                    <input type="text" name="dev" id="input-dev" class="form-control form-control-alternative ">
+                                    <input type="text" name="dev" id="dev" class="form-control">
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
+                            <div class="col-md-3 ">
+                                <div class="form-group focused">
                                     <label class="form-control-label" for="">Atuação</label>
-                                    <input type="text" name="atuacao" class="form-control form-control-alternative">
+                                    <input type="text" name="atuacao" id="atuacao" class="form-control ">
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="form-group">
+                                <div class="form-group focused">
                                     <label class="form-control-label" for="">Autenticação</label>
-                                    <input type="text" name="auth" class="form-control form-control-alternative">
+                                    <input type="text" name="auth" id="auth" class="form-control ">
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="form-group">
-                                    <label class="form-control-label" for="">Diretoria (Sigla)</label>
-                                    <input type="text" name="diretsi" class="form-control form-control-alternative">
+                                <div class="form-group focused">
+                                    <label class="form-control-label " for="">Diretoria (Sigla)</label>
+                                    <input type="text" name="diretsi" id="diretsi" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -230,13 +231,13 @@ Consultar Sistemas
                             <div class="col-md-6">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="">Sistema (Nome)</label>
-                                    <input type="text" name="sistnm" class="form-control form-control-alternative">
+                                    <input type="text" name="sistnm" id="sistnm" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group focused">
                                     <label class="form-control-label" for="">Sistema (Sigla)</label>
-                                    <input type="text" name="sissig" class="form-control form-control-alternative">
+                                    <input type="text" name="sissig" id="sissig" class="form-control ">
                                 </div>
                             </div>
                         </div>
@@ -244,7 +245,7 @@ Consultar Sistemas
                             <div class="col-md-6">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="">Endereço</label>
-                                    <input type="text" name="endereco" class="form-control form-control-alternative">
+                                    <input type="text" name="endereco" id="endereco" class="form-control ">
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -280,13 +281,13 @@ Consultar Sistemas
                             <div class="col-md-6">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="">Gestor de Acesso Central</label>
-                                    <input type="text" name="gac" class="form-control form-control-alternative">
+                                    <input type="text" name="gac" id="gac" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group focused">
                                     <label class="form-control-label" for="">Gestor de Sistemas</label>
-                                    <input type="text" name="gds" class="form-control form-control-alternative">
+                                    <input type="text" name="gds" id="gds" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -294,13 +295,13 @@ Consultar Sistemas
                             <div class="col-md-6">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="">Gestor de Negócio Titular</label>
-                                    <input type="text" name="gnt" class="form-control form-control-alternative">
+                                    <input type="text" name="gnt" id="gnt" class="form-control ">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group focused">
                                     <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 1 -->
-                                    <input type="text" name="siapegnt" class="form-control form-control-alternative">
+                                    <input type="text" name="siapegnt" id="siapegnt" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -308,13 +309,13 @@ Consultar Sistemas
                             <div class="col-md-6">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="">Gestor de Negócio Substituto</label>
-                                    <input type="text" name="gns" class="form-control form-control-alternative">
+                                    <input type="text" name="gns" id="gns" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group has-black">
+                                <div class="form-group has-black focused">
                                     <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 2 -->
-                                    <input type="text" name="siapegns" class="form-control form-control-alternative">
+                                    <input type="text" name="siapegns" id="siapegns" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -322,13 +323,13 @@ Consultar Sistemas
                             <div class="col-md-6">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="">Gestor de Informação Titular</label>
-                                    <input type="text" name="git" class="form-control form-control-alternative">
+                                    <input type="text" name="git" id="git" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group has-black">
+                                <div class="form-group has-black focused">
                                     <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 3 -->
-                                    <input type="text" name="siapegit" class="form-control form-control-alternative">
+                                    <input type="text" name="siapegit" id="siapegit" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -336,13 +337,13 @@ Consultar Sistemas
                             <div class="col-md-6">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="">Gestor da Informação Substituto </label>
-                                    <input type="text" name="gis" class="form-control form-control-alternative">
+                                    <input type="text" name="gis" id="gis" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group has-black">
+                                <div class="form-group has-black focused">
                                     <label class="form-control-label" for="">SIAPE</label> <!-- siape vai ser endereço unico siape 4 -->
-                                    <input type="text" name="siapegis" class="form-control form-control-alternative">
+                                    <input type="text" name="siapegis" id="siapegis" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -362,7 +363,7 @@ Consultar Sistemas
                                 </div>
                             </div>
                             <div class="col-md-9">
-                                <div class="form-group">
+                                <div class="form-group focused">
                                     <label class="form-control-label" for="input-name">Número do Processo</label>
                                     <input type="text" class="form-control" disabled />
                                 </div>
@@ -372,7 +373,7 @@ Consultar Sistemas
                             <div class="col-md-12 md-8">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="">Observação</label>
-                                    <textarea class="form-control form-control-alternative" name="obsv" rows="3" placeholder="Adicione algum comentário aqui."></textarea>
+                                    <textarea class="form-control form-control-alternative" name="obsv" id="obsv" rows="3" placeholder="Adicione algum comentário aqui."></textarea>
                                 </div>
                             </div>
                         </div>

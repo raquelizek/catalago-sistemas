@@ -213,18 +213,8 @@ Consultar Sistemas
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($sistemasgestao as $sistemasgt)
-
-                                        <td>{{$sistemasgt->id}}</td>
-                                        <td>{{$sistemasgt->sistnm}}</td>
-                                        <td>{{$sistemasgt->endereco}}</td>>
-                                        <td>{{$sistemasgt->diretsi}}</td>
-                                        <td></td>
-                                        
                                         <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
                                         <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
-                                         
-                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

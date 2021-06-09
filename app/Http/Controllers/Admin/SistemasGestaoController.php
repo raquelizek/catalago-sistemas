@@ -8,10 +8,22 @@ use Illuminate\Http\Request;
 
 class SistemasGestaoController extends Controller
 {
+    public function index()
+    {
+        $sistemasgestao = SistemasGest::all();
+        return view('admin.cadastrarsis');
+    }
+
+
+
     public function create()
     {
         return view('admin.cadastrarsis');
     }
+
+
+
+
 
     public function store(Request $request)
     {

@@ -23,21 +23,21 @@ class CreateSistemasgestaoTable extends Migration
             $table->string('sistnm');
             $table->string('sissig');
             $table->string('endereco');
-            $table->string('dns');
-            $table->string('pdti');
-            $table->string('gac');
-            $table->string('gds');
-            $table->string('gnt');
+            $table->string('dns')->nullable();
+            $table->string('pdti')->nullable();
+            $table->string('gac')->nullable();
+            $table->string('gds')->nullable();
+            $table->string('gnt')->nullable();
             $table->string('siapegnt')->unique();
-            $table->string('gns');
+            $table->string('gns')->nullable();
             $table->string('siapegns')->unique();
-            $table->string('git');
+            $table->string('git')->nullable();
             $table->string('siapegit')->unique();
-            $table->string('gis');
+            $table->string('gis')->nullable();
             $table->string('siapegis')->unique();
-            $table->string('prsei');
-            $table->string('numerosei');
-            $table->string('obsv')->nullable();
+            $table->string('prsei')->nullable();
+            $table->string('numerosei')->nullable();
+            $table->text('obsv')->nullable();
         });
     }
 
