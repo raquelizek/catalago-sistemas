@@ -14,5 +14,19 @@ class SistemasGest extends Model
     public $table = 'sistemasgestao';
 }
 
+$query = "SELECT ID FROM USERS";
+$result = mysqli_query($dbConnection, $query);
 
+if(empty($result)) {
+                $query = "CREATE TABLE SISTEMASGESTAO (
+                          ID int(11) AUTO_INCREMENT,
+                          EMAIL varchar(255) NOT NULL,
+                          PASSWORD varchar(255) NOT NULL,
+                          PERMISSION_LEVEL int,
+                          APPLICATION_COMPLETED int,
+                          APPLICATION_IN_PROGRESS int,
+                          PRIMARY KEY  (ID)
+                          )";
+                $result = mysqli_query($dbConnection, $query);
+}
 
