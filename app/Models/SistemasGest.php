@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use mysqli;
 
 class SistemasGest extends Model
 {
@@ -14,11 +15,20 @@ class SistemasGest extends Model
     public $table = 'sistemasgestao';
 }
 
-$query = "SELECT ID FROM USERS";
-$result = mysqli_query($dbConnection, $query);
 
-if(empty($result)) {
-                $query = "CREATE TABLE SISTEMASGESTAO (
+//último código adicionado 10/06 para criar a tabela se não existir e os campos!!!!!!!!!!
+$db_Host = "127.0.0.1";
+$db_username = 'root';
+$db_password = '';
+$db_primaryDatabase = 'catalogosistemas';
+
+
+$conn = new mysqli($db_Host, $db_username, $db_password, $db_primaryDatabase);
+if (mysqli_connect_errno()) {
+    printf("Não foi possível conectar ao banco de dados: %s\n", mysqli_connect_error());
+    exit();
+}
+                $query = "CREATE TABLE IF NOT EXISTS exemplo (
                           ID int(11) AUTO_INCREMENT,
                           EMAIL varchar(255) NOT NULL,
                           PASSWORD varchar(255) NOT NULL,
@@ -27,6 +37,6 @@ if(empty($result)) {
                           APPLICATION_IN_PROGRESS int,
                           PRIMARY KEY  (ID)
                           )";
-                $result = mysqli_query($dbConnection, $query);
-}
+                $result = mysqli_query($conn, $query);
+
 
