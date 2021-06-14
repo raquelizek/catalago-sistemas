@@ -40,3 +40,16 @@ if (mysqli_connect_errno()) {
                 $result = mysqli_query($conn, $query);
 
 
+                if (!Schema::hasTable('tblCategory')) {
+                    Schema::create('tblCategory', function($table){
+                           $table->engine = 'InnoDB';
+                           $table->increments('CategoryID');
+                           $table->string('Category', 40);
+                           $table->unique('Category', 'tblCategory_UK_Category');
+                           $table->timestamps();
+                   }
+               }
+
+
+               
+
