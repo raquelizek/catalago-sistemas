@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Schema;
 use mysqli;
 
 class SistemasGest extends Model
@@ -28,28 +29,33 @@ if (mysqli_connect_errno()) {
     printf("Não foi possível conectar ao banco de dados: %s\n", mysqli_connect_error());
     exit();
 }
-                $query = "CREATE TABLE IF NOT EXISTS exemplo (
-                          ID int(11) AUTO_INCREMENT,
-                          EMAIL varchar(255) NOT NULL,
-                          PASSWORD varchar(255) NOT NULL,
-                          PERMISSION_LEVEL int,
-                          APPLICATION_COMPLETED int,
-                          APPLICATION_IN_PROGRESS int,
-                          PRIMARY KEY  (ID)
-                          )";
-                $result = mysqli_query($conn, $query);
-
-
-                if (!Schema::hasTable('tblCategory')) {
-                    Schema::create('tblCategory', function($table){
-                           $table->engine = 'InnoDB';
-                           $table->increments('CategoryID');
-                           $table->string('Category', 40);
-                           $table->unique('Category', 'tblCategory_UK_Category');
-                           $table->timestamps();
-                   }
-               }
-
-
                
-
+               if (!Schema::hasTable('sistemasgestao')) {
+               Schema::create('sistemasgestao', function($table){
+                $table->id();
+                $table->timestamps();
+                $table->string('dev');
+                $table->string('atuacao');
+                $table->string('auth');
+                $table->string('diretsi');
+                $table->string('sistnm');
+                $table->string('sissig');
+                $table->string('endereco');
+                $table->string('dns')->nullable();
+                $table->string('pdti')->nullable();
+                $table->string('gac')->nullable();
+                $table->string('gds')->nullable();
+                $table->string('gnt')->nullable();
+                $table->string('siapegnt')->unique();
+                $table->string('gns')->nullable();
+                $table->string('siapegns')->unique();
+                $table->string('git')->nullable();
+                $table->string('siapegit')->unique();
+                $table->string('gis')->nullable();
+                $table->string('siapegis')->unique();
+                $table->string('prsei')->nullable();
+                $table->string('numerosei')->nullable();
+                $table->text('obsv')->nullable();
+            });
+        }
+        
