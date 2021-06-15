@@ -29,7 +29,8 @@ if (mysqli_connect_errno()) {
     printf("Não foi possível conectar ao banco de dados: %s\n", mysqli_connect_error());
     exit();
 }
-               
+            
+
                if (!Schema::hasTable('sistemasgestao')) {
                Schema::create('sistemasgestao', function($table){
                 $table->id();
