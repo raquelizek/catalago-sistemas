@@ -14,16 +14,10 @@ class SistemasGestaoController extends Controller
         return view('admin.cadastrarsis');
     }
 
-
-
     public function create()
     {
         return view('admin.cadastrarsis');
     }
-
-
-
-
 
     public function store(Request $request)
     {
@@ -50,7 +44,6 @@ class SistemasGestaoController extends Controller
         $sistemasgestao->prsei = $request->input('prsei');
         $sistemasgestao->numerosei = $request->input('numerosei');
         $sistemasgestao->obsv = $request->input('obsv');
-
         $sistemasgestao->save();
         return redirect('/consultar')->with('sucess', 'Sistema incluído com sucesso.');
     }
