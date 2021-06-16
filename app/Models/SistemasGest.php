@@ -11,7 +11,7 @@ use mysqli;
 class SistemasGest extends Model
 {
 
- 
+
     protected $fillable = ['dev', 'atuacao', 'auth', 'diretsi', 'sistnm', 'sissig', 'endereco', 'dns', 'pdti', 'gac', 'gds', 'gnt', 'siapegnt', 'gns', 'siapegns', 'git', 'siapegit', 'gis', 'siapegis', 'prsei', 'numerosei', 'obsv'];
     public $table = 'sistemasgestao';
 }
@@ -29,34 +29,32 @@ if (mysqli_connect_errno()) {
     printf("Não foi possível conectar ao banco de dados: %s\n", mysqli_connect_error());
     exit();
 }
-            
 
-               if (!Schema::hasTable('sistemasgestao')) {
-               Schema::create('sistemasgestao', function($table){
-                $table->id();
-                $table->timestamps();
-                $table->string('dev');
-                $table->string('atuacao');
-                $table->string('auth');
-                $table->string('diretsi');
-                $table->string('sistnm');
-                $table->string('sissig');
-                $table->string('endereco');
-                $table->string('dns')->nullable();
-                $table->string('pdti')->nullable();
-                $table->string('gac')->nullable();
-                $table->string('gds')->nullable();
-                $table->string('gnt')->nullable();
-                $table->string('siapegnt')->unique();
-                $table->string('gns')->nullable();
-                $table->string('siapegns')->unique();
-                $table->string('git')->nullable();
-                $table->string('siapegit')->unique();
-                $table->string('gis')->nullable();
-                $table->string('siapegis')->unique();
-                $table->string('prsei')->nullable();
-                $table->string('numerosei')->nullable();
-                $table->text('obsv')->nullable();
-            });
-        }
-        
+if (!Schema::hasTable('sistemasgestao')) {
+    Schema::create('sistemasgestao', function ($table) {
+        $table->increments('id');
+        $table->timestamps();
+        $table->string('dev');
+        $table->string('atuacao');
+        $table->string('auth');
+        $table->string('diretsi');
+        $table->string('sistnm');
+        $table->string('sissig');
+        $table->string('endereco');
+        $table->boolean('dns');
+        $table->boolean('pdti');
+        $table->string('gac');
+        $table->string('gds');
+        $table->string('gnt');
+        $table->string('siapegnt')->unique();
+        $table->string('gns');
+        $table->string('siapegns')->unique();
+        $table->string('git');
+        $table->string('siapegit')->unique();
+        $table->string('gis');
+        $table->string('siapegis')->unique();
+        $table->boolean('prsei');
+        $table->string('numerosei')->unique();
+        $table->text('obsv')->nullable();
+    });
+}
