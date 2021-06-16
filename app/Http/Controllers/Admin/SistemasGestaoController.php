@@ -47,4 +47,10 @@ class SistemasGestaoController extends Controller
         $sistemasgestao->save();
         return redirect('/consultar')->with('sucess', 'Sistema incluído com sucesso.');
     }
+
+    public function allregister()
+    {
+        $sistemas = SistemasGest::all();
+        return view('admin.consultar')->with('sistemas', $sistemas);
+    }
 }
