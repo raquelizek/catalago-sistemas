@@ -62,7 +62,9 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::get('/meu-perfil', function () {
 		return view('admin.profile');
 	});
-
+	Route::get('/consultar-sist', function () {
+		return view('admin.consultarsis');
+	});
 
 	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'registered'])->name('registeru');
 	Route::get('/cadastrar-sistemas', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'create']);
@@ -70,6 +72,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::get('/edit/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registeredit'])->name('edit');
 	Route::put('/usuarios-registrados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerupdate']);
 	Route::delete('/usuarios-deletados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerdelete']);
-	
+	Route::get('/consultar', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'allregister']);
 });
 
