@@ -197,6 +197,27 @@ Consultar Sistemas
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md9">
+                            <input onchange="modSaida(this)" onchange="modSaida(this)" type="radio" name="radio1" value="entrada"> Entrada
+                            <input onchange="modSaida(this)" type="radio" name="radio1" value="saida"> Saida
+                            <br />
+
+                            <div class="form-group">
+                                <label style="color:white" for="valor">Valor Entrada</label>
+                                <div class="input-group" id="entrada">
+                                    <input type="number" class="form-control" step="any" name="valor" required ng-model="contato.valor" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label style="color:white" for="valor">Valor Despesa</label>
+                                <div class="input-group" id="saida">
+                                    <input type="number" class="form-control" step="any" name="valor" required ng-model="contato.valorsaida" required>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <div class="row">
                             <div class="col-md-12 md-8">
                                 <div class="form-group focused">
@@ -223,5 +244,12 @@ Consultar Sistemas
 @endsection
 
 @section('scripts')
+
+<script>
+    function test(i) {
+        campo = document.querySelector("input[ng-model='contato.valorsaida']");
+        campo.disabled = i.value == "entrada" ? true : false;
+    }
+</script>
 
 @endsection
