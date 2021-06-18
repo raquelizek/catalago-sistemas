@@ -73,5 +73,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::put('/usuarios-registrados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerupdate']);
 	Route::delete('/usuarios-deletados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerdelete']);
 	Route::get('/consultar', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'allregister']);
+	Route::put('/consultar', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'editsistem']);
 });
 
