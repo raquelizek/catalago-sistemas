@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\SistemasGest;
 use Illuminate\Http\Request;
+use Symfony\Component\DomCrawler\Form;
 
 class SistemasGestaoController extends Controller
 {
@@ -29,6 +30,7 @@ class SistemasGestaoController extends Controller
         $sistemasgestao->sistnm = $request->input('sistnm');
         $sistemasgestao->sissig = $request->input('sissig');
         $sistemasgestao->endereco = $request->input('endereco');
+        $sistemasgestao->status = $request->input('status');
         $sistemasgestao->dns = $request->input('dns');
         $sistemasgestao->pdti = $request->input('pdti');
         $sistemasgestao->gac = $request->input('gac');
@@ -52,5 +54,13 @@ class SistemasGestaoController extends Controller
     {
         $sistemas = SistemasGest::all();
         return view('admin.consultar')->with('sistemas', $sistemas);
+    }
+
+    public function editsistem(Request $request, $id)
+    {
+        $bool = SistemasGest::radio('status', 'Sim');
+        $bool->status = $request->input('status');
+        $bool->save();
+        return view('admin.consultar');
     }
 }
