@@ -10,7 +10,7 @@ Consultar Sistemas
 <hr class="my-0">
 <br>
 <div class="container">
-    <div class="row justify-content-md-center">
+    <div class="row justify">
         <div class="col-mt-12">
             <div class="card">
                 <div class="card-header" class="card-title text-uppercase text-default mb-0 ">
@@ -44,7 +44,7 @@ Consultar Sistemas
                                     <td>{{$row->sistnm}}</td>
                                     <td>{{$row->endereco}}</td>
                                     <td>{{$row->diretsi}}</td>
-                                    <td>Status</td>
+                                    <td>{{$row->status}}</td>
                                     <td><a href="/info-tec" class="badge badge-danger">Informações Técnicas</a></td>
                                     <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
                                     @endforeach

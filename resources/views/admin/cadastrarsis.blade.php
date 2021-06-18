@@ -76,31 +76,57 @@ Consultar Sistemas
                                     <input type="text" name="endereco" id="endereco" class="form-control ">
                                 </div>
                             </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="">Status do Sistema</label>
+                                    <select class="form-control" name="status">
+                                        <option value="ativado">Ativado</option>
+                                        <option value="desativado">Desativado</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
                             <div class="col-md-2">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-name">DNS</label>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-5" class="custom-control-input" id="customRadio5" type="radio">
-                                        <label class="custom-control-label" for="customRadio5">Sim</label>
+                                        <input type="radio" name="dns" value="1" /> Sim
                                     </div>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-6" class="custom-control-input" id="customRadio6" type="radio">
-                                        <label class="custom-control-label" for="customRadio6">Não</label>
+                                        <input type="radio" name="dns" value="0" /> Não
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="form-group focused">
+                                     <label class="form-control-label" for="input-name">PDTI</label>
+                                    <div class="custom-control custom-radio mb-3">
+                                        <input type="radio" name="pdti" value="1" /> Sim
+                                    </div>
+                                    <div class="custom-control custom-radio mb-3">
+                                        <input type="radio" name="pdti" value="0" /> Não
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">PDTI</label>
-
+                                <label class="form-control-label" for="input-name">Possui processo no SEI?</label>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-7" class="custom-control-input" id="customRadio7" type="radio">
-                                        <label class="custom-control-label" for="customRadio7">Sim</label>
+                                        <input type="radio" name="prsei" value="1" /> Sim
                                     </div>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-8" class="custom-control-input" id="customRadio8" type="radio">
-                                        <label class="custom-control-label" for="customRadio8">Não</label>
+                                        <input type="radio" name="prsei" value="0" /> Não
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="input-name">Número do Processo</label>
+                                    <input type="text" name="numerosei" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -175,48 +201,6 @@ Consultar Sistemas
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Possui processos gerados no SEI?</label>
-
-                                    <div class="custom-control custom-radio mb-3">
-                                        <input name="custom-radio-9" class="custom-control-input" id="customRadio9" type="radio">
-                                        <label class="custom-control-label" for="customRadio9">Sim</label>
-                                    </div>
-                                    <div class="custom-control custom-radio mb-3 ">
-                                        <input name="custom-radio-10" class="custom-control-input" id="customRadio10" type="radio">
-                                        <label class="custom-control-label" for="customRadio10">Não</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="form-group focused">
-                                    <label class="form-control-label" for="input-name">Número do Processo</label>
-                                    <input type="text" class="form-control" disabled />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md9">
-                            <input onchange="modSaida(this)" onchange="modSaida(this)" type="radio" name="radio1" value="entrada"> Entrada
-                            <input onchange="modSaida(this)" type="radio" name="radio1" value="saida"> Saida
-                            <br />
-
-                            <div class="form-group">
-                                <label style="color:white" for="valor">Valor Entrada</label>
-                                <div class="input-group" id="entrada">
-                                    <input type="number" class="form-control" step="any" name="valor" required ng-model="contato.valor" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label style="color:white" for="valor">Valor Despesa</label>
-                                <div class="input-group" id="saida">
-                                    <input type="number" class="form-control" step="any" name="valor" required ng-model="contato.valorsaida" required>
-                                </div>
-                            </div>
-                        </div>
-
 
                         <div class="row">
                             <div class="col-md-12 md-8">

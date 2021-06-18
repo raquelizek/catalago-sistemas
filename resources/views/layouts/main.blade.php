@@ -25,7 +25,7 @@
     <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
-            <a class="navbar-brand" href="/dashboard">
+            <a class="navbar-brand" href="/home">
                 <img src="assets/img/brand/inss-logo-4.png" class="navbar-brand-img" alt="..."> <br>
                 Catálogo de Sistemas
             </a>
@@ -36,7 +36,7 @@
                 <!-- Nav items -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/dashboard">
+                        <a class="nav-link" href="/home">
                             <i class="fas fa-brain text-green"></i>
                             <span class="nav-link-text">Página Inicial</span>
                         </a>
