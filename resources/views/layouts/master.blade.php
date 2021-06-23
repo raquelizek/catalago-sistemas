@@ -165,13 +165,8 @@
                             </div>
                         </a>
                         <div class="dropdown-menu  dropdown-menu-right ">
-                            <div class="dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Bem vindo</h6>
-                            </div>
-                            <a href="/meu-perfil" class="dropdown-item">
-                                <i class="ni ni-settings-gear-65"></i>
-                                <span>Configurações</span>
-                            </a>
+                            
+                            
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 <i class="fas fa-door-open"></i>
