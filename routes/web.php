@@ -68,11 +68,12 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 
 	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'registered'])->name('registeru');
 	Route::get('/cadastrar-sistemas', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'create']);
-	Route::post ('/salvarsistema', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'store'])->name('registrarsist');
+	Route::post ('/salvarsistema', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'store']);
 	Route::get('/edit/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registeredit'])->name('edit');
 	Route::put('/usuarios-registrados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerupdate']);
 	Route::delete('/usuarios-deletados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerdelete']);
 	Route::get('/consultar', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'allregister']);
-	Route::put('/consultar', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'editsistem']);
+	Route::post ('/salvarsistematec', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'store']);
+	Route::get('/info-tec', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'create']);
 });
 

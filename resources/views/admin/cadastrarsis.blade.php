@@ -81,8 +81,8 @@ Consultar Sistemas
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="">Status do Sistema</label>
                                     <select class="form-control" name="status">
-                                        <option value="ativado">Ativado</option>
-                                        <option value="desativado">Desativado</option>
+                                        <option value="Ativado">Ativado</option>
+                                        <option value="Desativado">Desativado</option>
                                     </select>
                                 </div>
                             </div>
@@ -93,10 +93,10 @@ Consultar Sistemas
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-name">DNS</label>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input type="radio" name="dns" value="1" /> Sim
+                                        <input type="radio" name="dns" value="Sim" /> Sim
                                     </div>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input type="radio" name="dns" value="0" /> Não
+                                        <input type="radio" name="dns" value="Não" /> Não
                                     </div>
                                 </div>
                             </div>
@@ -105,10 +105,10 @@ Consultar Sistemas
                                 <div class="form-group focused">
                                      <label class="form-control-label" for="input-name">PDTI</label>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input type="radio" name="pdti" value="1" /> Sim
+                                        <input type="radio" name="pdti" value="Sim" /> Sim
                                     </div>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input type="radio" name="pdti" value="0" /> Não
+                                        <input type="radio" name="pdti" value="Não" /> Não
                                     </div>
                                 </div>
                             </div>
@@ -116,10 +116,10 @@ Consultar Sistemas
                                 <div class="form-group focused">
                                 <label class="form-control-label" for="input-name">Possui processo no SEI?</label>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input type="radio" name="prsei" value="1" /> Sim
+                                        <input type="radio" name="prsei" value="Sim" /> Sim
                                     </div>
                                     <div class="custom-control custom-radio mb-3">
-                                        <input type="radio" name="prsei" value="0" /> Não
+                                        <input type="radio" name="prsei" value="Não" /> Não
                                     </div>
                                 </div>
                             </div>
@@ -221,19 +221,9 @@ Consultar Sistemas
 
 
 
-
-
-
-
 @endsection
 
 @section('scripts')
 
-<script>
-    function test(i) {
-        campo = document.querySelector("input[ng-model='contato.valorsaida']");
-        campo.disabled = i.value == "entrada" ? true : false;
-    }
-</script>
 
 @endsection
