@@ -29,9 +29,9 @@ if (!Schema::hasTable('sistemasgestao')) {
         $table->string('sistnm');
         $table->string('sissig');
         $table->string('endereco', 60);
-        $table->boolean('status')->default(0);
-        $table->boolean('dns')->default(0);
-        $table->boolean('pdti')->default(0);
+        $table->string('status');
+        $table->string('dns');
+        $table->string('pdti');
         $table->string('gac');
         $table->string('gds');
         $table->string('gnt');
@@ -42,8 +42,10 @@ if (!Schema::hasTable('sistemasgestao')) {
         $table->string('siapegit', 7)->nullable();
         $table->string('gis');
         $table->string('siapegis', 7)->nullable();
-        $table->boolean('prsei')->default(0);
+        $table->string('prsei');
         $table->string('numerosei', 30)->unique();
         $table->text('obsv')->nullable();
+        $table->save();
     });
+    
 }

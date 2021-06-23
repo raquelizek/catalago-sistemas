@@ -22,33 +22,37 @@ class SistemasGestaoController extends Controller
 
     public function store(Request $request)
     {
-        $sistemasgestao = new SistemasGest;
-        $sistemasgestao->dev = $request->input('dev');
-        $sistemasgestao->atuacao = $request->input('atuacao');
-        $sistemasgestao->auth = $request->input('auth');
-        $sistemasgestao->diretsi = $request->input('diretsi');
-        $sistemasgestao->sistnm = $request->input('sistnm');
-        $sistemasgestao->sissig = $request->input('sissig');
-        $sistemasgestao->endereco = $request->input('endereco');
-        $sistemasgestao->status = $request->input('status');
-        $sistemasgestao->dns = $request->input('dns');
-        $sistemasgestao->pdti = $request->input('pdti');
-        $sistemasgestao->gac = $request->input('gac');
-        $sistemasgestao->gds = $request->input('gds');
-        $sistemasgestao->gnt = $request->input('gnt');
-        $sistemasgestao->siapegnt = $request->input('siapegnt');
-        $sistemasgestao->gns = $request->input('gns');
-        $sistemasgestao->siapegns = $request->input('siapegns');
-        $sistemasgestao->git = $request->input('git');
-        $sistemasgestao->siapegit = $request->input('siapegit');
-        $sistemasgestao->gis = $request->input('gis');
-        $sistemasgestao->siapegis = $request->input('siapegis');
-        $sistemasgestao->prsei = $request->input('prsei');
-        $sistemasgestao->numerosei = $request->input('numerosei');
-        $sistemasgestao->obsv = $request->input('obsv');
-        $sistemasgestao->save();
-        return redirect('/consultar')->with('sucess', 'Sistema incluído com sucesso.');
+        $sistemasgestao = [
+            'sist_id' => request('sist_id'),
+            'dev' => request('dev'),
+            'atuacao' => request('atuacao'),
+            'auth' => request('auth'),
+            'diretsi' => request('diretsi'),
+            'sistnm' => request('sistnm'),
+            'sissig' => request('sissig'),
+            'endereco' => request('endereco'),
+            'status' => request('status'),
+            'dns' => request('dns'),
+            'pdti' => request('pdti'),
+            'gac' => request('gac'),
+            'gds' => request('gds'),
+            'gnt' => request('gnt'),
+            'siapegnt' => request('siapegnt'),
+            'gns' => request('gns'),
+            'siapegns' => request('siapegns'),
+            'git' => request('git'),
+            'siapegit' => request('siapegit'),
+            'gis' => request('gis'),
+            'siapegis' => request('siapegis'),
+            'prsei' => request('prsei'),
+            'numerosei' => request('numerosei'),
+            'obsv' => request('obsv')
+        ];
+        SistemasGest::create($sistemasgestao);
+        return redirect('/consultar')->with('status', 'Sistema incluído com sucesso.');
     }
+        
+    
 
     public function allregister()
     {
@@ -56,11 +60,5 @@ class SistemasGestaoController extends Controller
         return view('admin.consultar')->with('sistemas', $sistemas);
     }
 
-    public function editsistem(Request $request, $id)
-    {
-        $bool = SistemasGest::radio('status', 'Sim');
-        $bool->status = $request->input('status');
-        $bool->save();
-        return view('admin.consultar');
-    }
+   
 }
