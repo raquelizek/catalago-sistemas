@@ -19,7 +19,15 @@ Consultar Sistemas
                     <div class="col-7 text-left">
                         <a href="cadastrar-sistemas" class="btn btn-sm btn-outline-info text-info">Cadastrar Novo Sistema</a>
                     </div>
-
+                    <div class="col-sm-6">
+                        <div class="card-body">
+                            @if (session('status'))
+                            <div class="alert alert-primary" role="alert">
+                                {{ session('status') }}
+                            </div>
+                            @endif
+                        </div>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="row justify-content-center align-items-center">
