@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\SistemasGest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -33,5 +34,16 @@ class DashboardController extends Controller
         $users = User::findOrFail($id);
         $users->delete();
         return redirect('/usuarios-registrados')->with('status', 'Usuário excluído com sucesso.');
+    }
+    public function indexx()
+    {
+        $indexreg = SistemasGest::all();
+        return view('admin.dashboard')->with('indexreg', $indexreg);
+    }
+
+    public function index()
+    {
+        $sistemasgestao = SistemasGest::all();
+        return view('admin.dashboard');
     }
 }
