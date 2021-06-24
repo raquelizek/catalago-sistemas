@@ -26,10 +26,9 @@
     <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
-            <a class="navbar-brand" href="/dashboard">
-                <img src="/assets/img/brand/inss-logo-4.png" class="navbar-brand-img" alt="..."> <br>
-                Catálogo de Sistemas
-            </a>
+        <a class="navbar-brand pt-4.5" href="/dashboard">
+                    Catálogo de <br> Sistemas
+                </a>
         </div>
         <div class="navbar-inner">
             <!-- Collapse -->
