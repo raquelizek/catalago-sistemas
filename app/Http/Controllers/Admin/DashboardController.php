@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\SistemasGest;
+use App\Models\SistemasTec;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,14 @@ class DashboardController extends Controller
     {
         $indexreg = SistemasGest::all();
         return view('admin.dashboard')->with('indexreg', $indexreg);
+        
+    }
+
+    public function indexx2()
+    {
+        $indexregi = SistemasTec::all();
+        return view('admin.dashboard')->with('indexregi', $indexregi);
+       
     }
 
     public function index()
