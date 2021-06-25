@@ -185,7 +185,7 @@
                         <div class="form-group mb-0">
                             <div class="input-group input-group-alternative input-group-merge">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                    <a href="/"><span class="input-group-text"><i class=" fas fa-search"></i></span></a>
                                 </div>
                                 <input class="form-control mr-sm-3" placeholder="Pesquisar" type="text">
                             </div>
@@ -210,7 +210,7 @@
                                     <th><b>Nome do Sistema</b></th>
                                     <th><b>Endereço do Sistema</b></th>
                                     <th><b>Área Demandante</b></th>
-                                    <th><b>Status</b></th>
+                                    <th><b>Intranet/Internet</b></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -219,8 +219,12 @@
                                     <td>{{$row->sistnm}}</td>
                                     <td>{{$row->endereco}}</td>
                                     <td>{{$row->diretsi}}</td>
-                                    <td>{{$row->status}}</td>
+                                    
                                     @endforeach
+                                    @foreach ($indexreg as $row)
+                                    <td>{{$row->intra_inter}}</td>
+                                    @endforeach
+
                             </tbody>
                         </table>
                     </div>

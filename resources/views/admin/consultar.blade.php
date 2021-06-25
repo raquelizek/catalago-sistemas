@@ -49,7 +49,7 @@ Consultar Sistemas
                             <tbody>
                                 @foreach ($sistemas as $row)
                                 <tr>
-                                    <td>{{$row->sistnm}}</td>
+                                    <td><a href="">{{$row->sistnm}}</a></td>
                                     <td>{{$row->endereco}}</td>
                                     <td>{{$row->diretsi}}</td>
                                     <td>{{$row->status}}</td>
