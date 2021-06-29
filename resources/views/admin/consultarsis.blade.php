@@ -16,19 +16,22 @@ Consultar Sistemas
                     <h2 class="card-title text-uppercase text-default mb-0 ">Consultar Sistemas Cadastrados</h2>
                     <br>
                 </div>
+                
                 <form action="/salvarsistema" method="post">
                     @csrf
+                    @foreach ($query as $row)
                     <div class="card-body">
                         <div class="row justify-content-center align-items-center ">
                             <h3>Informações da Aréa de negócio</h3>
                         </div>
                         <hr class="my-3">
                         <br>
+                        
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label class="form-control-label" for="">Desenvolvedor</label>
-                                    <input type="text" name="dev" id="dev" class="form-control" disabled>
+                                    <input type="text" name="dev" id="{{ $row->dev }}" class="form-control" disabled>
                                 </div>
                             </div>
                             <div class="col-md-3 ">
@@ -74,14 +77,14 @@ Consultar Sistemas
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-name">DNS</label>
-                                    
+
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-name">PDTI</label>
 
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -161,7 +164,7 @@ Consultar Sistemas
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-name">Possui processos gerados no SEI?</label>
 
-                                    
+
                                 </div>
                             </div>
                             <div class="col-md-9">
@@ -253,7 +256,7 @@ Consultar Sistemas
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="input-name">Possui integração com outros sistemas?</label>
 
-                                       
+
                                     </div>
                                 </div>
                                 <div class="col-md-9">
@@ -269,7 +272,7 @@ Consultar Sistemas
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="input-name">Possui integração com outras base de dados?</label>
 
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-md-9">
@@ -283,7 +286,7 @@ Consultar Sistemas
                                 <div class="col-md-3">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="input-name">Possui integração com outros serviços?</label>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="col-md-9">
@@ -316,6 +319,7 @@ Consultar Sistemas
                                 </div>
                             </div>
                         </div>
+                     @endforeach
                 </form>
             </div>
         </div>

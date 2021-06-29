@@ -49,7 +49,7 @@ Consultar Sistemas
                             <tbody>
                                 @foreach ($sistemas as $row)
                                 <tr>
-                                    <td><a href="">{{$row->sistnm}}</a></td>
+                                    <td><a href="/consultar-sist">{{$row->sistnm}}</a></td>
                                     <td>{{$row->endereco}}</td>
                                     <td>{{$row->diretsi}}</td>
                                     <td>{{$row->status}}</td>
@@ -65,17 +65,7 @@ Consultar Sistemas
     </div>
 </div>
 
-<div class="container">
-<nav aria-label="...">
-  <ul class="pagination pagination-lg">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">1</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-  </ul>
-</nav>
-</div>
+
 
 
 

@@ -51,4 +51,12 @@ class DashboardController extends Controller
         $sistemasgestao = SistemasGest::all();
         return view('admin.dashboard');
     }
+
+    public function consultarsistemas()
+    {
+        $query = DB::table('sistemasgestao')
+            ->join('sistemastecnico', 'sist_id', '=', 'sistt_id')
+            ->get();
+        return view('admin.consultarsis')->with('query', $query);
+    }
 }
