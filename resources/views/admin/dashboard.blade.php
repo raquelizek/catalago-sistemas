@@ -168,7 +168,7 @@
         </nav>
     </div>
     <hr class="my-0">
-    <br>
+    <br> 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -195,7 +195,7 @@
             </div>
         </div>
         <br>
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="card" style="width: 100rem;">
                 <div class="card-body">
                     <h3 class="card-title">Últimos Sistemas Cadastrados</h3>
@@ -222,7 +222,7 @@
                                     <td>{{$row->intra_inter}}</td>
 
                                     @endforeach
-
+                                </tr>
 
                             </tbody>
                         </table>
