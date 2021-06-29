@@ -27,7 +27,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
         <a class="navbar-brand pt-4.5" href="/dashboard">
-                    Catálogo de <br> Sistemas
+                    Catálogo de Sistemas
                 </a>
         </div>
         <div class="navbar-inner">

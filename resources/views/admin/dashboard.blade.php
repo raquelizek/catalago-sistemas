@@ -199,8 +199,8 @@
             <div class="card" style="width: 100rem;">
                 <div class="card-body">
                     <h3 class="card-title">Últimos Sistemas Cadastrados</h3>
-                    <div  class="card-title">
-                    <a href="consultar" button type="button" class="btn btn-outline-primary">Visualizar todos os Sistemas</a>
+                    <div class="card-title">
+                        <a href="consultar" button type="button" class="btn btn-outline-primary">Visualizar todos os Sistemas</a>
 
                     </div>
                     <div class="table-responsive ">
@@ -219,11 +219,10 @@
                                     <td>{{$row->sistnm}}</td>
                                     <td>{{$row->endereco}}</td>
                                     <td>{{$row->diretsi}}</td>
-                                    
-                                    @endforeach
-                                    @foreach ($indexreg as $row)
                                     <td>{{$row->intra_inter}}</td>
+
                                     @endforeach
+
 
                             </tbody>
                         </table>

@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\SistemasGest;
+use App\Models\SistemasGestao;
 use App\Models\SistemasTec;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -38,16 +40,10 @@ class DashboardController extends Controller
     }
     public function indexx()
     {
-        $indexreg = SistemasGest::all();
-        return view('admin.dashboard')->with('indexreg', $indexreg);
-        
-    }
-
-    public function indexx2()
-    {
-        $indexregi = SistemasTec::all();
-        return view('admin.dashboard')->with('indexregi', $indexregi);
-       
+        $indexreg = DB::table('sistemasgestao')
+            ->join('sistemastecnico', 'sist_id', '=', 'sistt_id')
+            ->get();
+        return view('admin.dashboard');
     }
 
     public function index()

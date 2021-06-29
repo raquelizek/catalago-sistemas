@@ -47,5 +47,5 @@ if (!Schema::hasTable('sistemasgestao')) {
         $table->text('obsv')->nullable();
         $table->save();
     });
-    
+   
 }
