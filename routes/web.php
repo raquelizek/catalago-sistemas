@@ -76,6 +76,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::post ('/salvarsistematec', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'store']);
 	Route::get('/info-tec', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'create']);
 	Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'indexx']);
-	Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'indexx2']);
+	
 });
 
