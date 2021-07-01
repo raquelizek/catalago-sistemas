@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\SistemasGest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Symfony\Component\DomCrawler\Form;
 
 class SistemasGestaoController extends Controller
@@ -52,13 +53,16 @@ class SistemasGestaoController extends Controller
         return redirect('/consultar')->with('status', 'Sistema incluído com sucesso.');
     }
         
-    
-
     public function allregister()
     {
         $sistemas = SistemasGest::all();
         return view('admin.consultar')->with('sistemas', $sistemas);
     }
 
+    public function consultarsistemas($id)
+    {
+        $query = SistemasGest::findOrFail($id);
+        return view('admin.concultarsis')->with('query', $query);
+    }
    
 }
