@@ -72,4 +72,6 @@ class SistemasGestaoController extends Controller
         ->get();
         return view('admin.consultarsis')->with('consultarsist', $consultarsist);
     }
+
+    
 }

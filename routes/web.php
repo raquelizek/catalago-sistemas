@@ -77,7 +77,8 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::get('/info-tec', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'create']);
 	Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'indexx']);
 	Route::get('/editar-sistema', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'editarsist']);
-	Route::get('/consultar-sist', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'consultarsistemas']);
+	Route::get('/consultar-sist/{sist_id}', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'consultarsistemas']);
+	
 	
 });
 
