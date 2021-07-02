@@ -30,6 +30,7 @@
                     Catálogo de Sistemas
                 </a>
         </div>
+        <hr class="my-0">
         <div class="navbar-inner">
             <!-- Collapse -->
             <div class="collapse navbar-collapse" id="sidenav-collapse-main">
@@ -182,6 +183,7 @@
         </div>
     </nav>
 </div>
+<hr class="my-0">
 
     @yield('content')
 
