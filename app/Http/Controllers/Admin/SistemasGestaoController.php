@@ -59,10 +59,17 @@ class SistemasGestaoController extends Controller
         return view('admin.consultar')->with('sistemas', $sistemas);
     }
 
-    public function consultarsistemas($id)
+    public function editarsist($id)
     {
         $query = SistemasGest::findOrFail($id);
         return view('admin.concultarsis')->with('query', $query);
     }
    
+    public function consultarsistemas()
+    {
+        $consultarsist = DB::table('sistemasgestao')
+        ->join('sistemastecnico', 'sist_id', '=', 'sistt_id')
+        ->get();
+        return view('admin.consultarsis')->with('consultarsist', $consultarsist);
+    }
 }
