@@ -16,14 +16,14 @@ Informações dos Sistemas
                 </div>
                 <br>
                 <div class="card-title">
-                        <div class="row justify-content-center align-items-center ">
-                            <h3>Informações da Aréa de negócio</h3>
-                        </div>
+                    <div class="row justify-content-center align-items-center ">
+                        <h3>Informações da Aréa de negócio</h3>
                     </div>
+                </div>
                 <div class="card-body">
                     <table class="table">
-                    @foreach ($consultarsist as $row)
-                    @csrf
+                        @foreach ($consultarsist as $row)
+                        @csrf
                         <tbody>
                             <tr>
                                 <th scope="row">Desenvolvedor</th>
