@@ -14,9 +14,10 @@ class SistemasTecnicosController extends Controller
         return view('admin.cadastrotec');
     }
 
-    public function create()
+    public function create($id)
     {
-        return view('admin.cadastrotec');
+        $sistemastecnico = SistemasTec::findOrFail($id);
+        return view('admin.cadastrotec')->with('sistemastecnico', $sistemastecnico);
     }
 
     public function store(Request $request)
@@ -44,7 +45,6 @@ class SistemasTecnicosController extends Controller
             'autenticacao' => request('autenticacao'),
             'obsvr' => request('obsvr')
         ];
-        SistemasTec::create($sistemastecnicos);
-        return redirect('/consultar')->with('status', 'Informações técnicas incluídas com sucesso.');
+        
     }
 }

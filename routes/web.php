@@ -74,10 +74,10 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::delete('/usuarios-deletados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerdelete']);
 	Route::get('/consultar', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'allregister']);
 	Route::post ('/salvarsistematec', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'store']);
-	Route::get('/info-tec', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'create']);
+	Route::put('/info-tec/{sistt_id}', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'create']);
 	Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'indexx']);
 	Route::get('/editar-sistema', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'editarsist']);
-	Route::get('/consultar-sist/{sist_id}', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'consultarsistemas']);
+	Route::get('/consultar-sist/{sistt_id}', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'consultarsistema']);
 	
 	
 });

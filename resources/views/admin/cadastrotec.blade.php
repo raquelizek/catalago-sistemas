@@ -19,12 +19,14 @@ Informações Técnicas
                     <br>
 
                 </div>
-                <form action="/salvarsistematec" method="post">
+                <form action="/info-tec/{{$sistemastecnico->sistt_id}}" method="post">
+                    {{csrf_field() }}
+                    {{method_field('put') }}
                     <div class="card-header" class="card-title">
-                    <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
+                        <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
                     </div>
-                    @csrf
                     
+
                     <div class="card-body">
                         <div class="row justify-content-center align-items-center ">
                             <h3>Informações Técnicas</h3>
