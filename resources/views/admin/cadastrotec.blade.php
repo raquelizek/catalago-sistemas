@@ -17,16 +17,12 @@ Informações Técnicas
                 <div class="card-header" class="card-title text-uppercase text-default mb-0 ">
                     <h2 class="card-title text-uppercase text-default mb-0 ">Adicionar Informações Técnicas</h2>
                     <br>
-
                 </div>
-                <form action="/info-tec/{{$sistemastecnico->sistt_id}}" method="post">
+                <form action="/salvarsistematec" method="post">
                     {{csrf_field() }}
-                    {{method_field('put') }}
                     <div class="card-header" class="card-title">
                         <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
                     </div>
-                    
-
                     <div class="card-body">
                         <div class="row justify-content-center align-items-center ">
                             <h3>Informações Técnicas</h3>
@@ -61,6 +57,12 @@ Informações Técnicas
                                             <input type="text" name="linguagem_v" id="linguagem_v" class="form-control form-control-alternative">
                                         </div>
                                     </div>
+                                    
+                                        
+                                            
+                                            <input type="hidden" name="sistGestaoFK" id="sistGestaoFK" value="{{ $id }}" class="form-control form-control-alternative">
+                                        
+                                    
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label class="form-control-label" for="input-name">Framework</label>

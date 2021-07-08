@@ -22,23 +22,25 @@ Informações dos Sistemas
                 </div>
                 <div class="card-body">
                     <table class="table">
-                        @foreach ($consultarsist as $row)
-                        @csrf
-                        <tbody>
-                            <tr>
-                                <th scope="row">Desenvolvedor</th>
-                                <td>{{$row->dev}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Atuação</th>
-                                <td>{{$row->atuacao}}</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Autenticação</th>
-                                <td>{{$row->auth}}</td>
-                            </tr>
-                        </tbody>
-                        @endforeach
+                        <form action="/consultar-sist/{{$consultarsistema->sitt_id}}" method="get">
+                            @foreach ($consultarsistema as $row)
+                            @csrf
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Desenvolvedor</th>
+                                    <td>{{$row->dev}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Atuação</th>
+                                    <td>{{$row->atuacao}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Autenticação</th>
+                                    <td>{{$row->auth}}</td>
+                                </tr>
+                            </tbody>
+                            @endforeach
+                        </form>
                     </table>
                 </div>
             </div>
