@@ -51,6 +51,7 @@ class SistemasTecnicosController extends Controller
         ];
        // window.location.href "http://localhost:8001/consultar";
         //return view('admin.consultar')->with('index');
+        //editar aqui
     }
 
     public function consultarsistema(Request $Request, $sist_id)
