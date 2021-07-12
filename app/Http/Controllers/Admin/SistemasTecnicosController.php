@@ -25,6 +25,7 @@ class SistemasTecnicosController extends Controller
 
     public function store(Request $request)
     {
+        
         $sistemastecnicos = [
             'sistt_id' => request('sistt_id'),
             'ambiente_hospedagem' => request('ambiente_hospedagem'),
@@ -46,9 +47,11 @@ class SistemasTecnicosController extends Controller
             'servico_inte' => request('servico_inte'),
             'end_gitinss' => request('end_gitinss'),
             'autenticacao' => request('autenticacao'),
-            'sistGestaoFK' => request('sist_id'),
+            'sistGestaoFK' => request('sistGestaoFK'),
             'obsvr' => request('obsvr')
         ];
+        SistemasTec::create($sistemastecnicos);
+        return redirect('/consultar')->with('status', 'Informações Técnicas Cadastradas.');
        // window.location.href "http://localhost:8001/consultar";
         //return view('admin.consultar')->with('index');
         //editar aqui

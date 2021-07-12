@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Schema;
 class SistemasTec extends Model
 {
     protected $primaryKey = 'sistt_id';
-    protected $fillable = ['ambiente_hospedagem', 'prioridade', 'linguagem_v', 'framework', 'banco_v', 'intra_inter', 'nome_banco', 'ip_hospedagemapp', 'ip_hospedagembd', 'tamanho_app', 'tamanho_bd', 'ps_sistemas', 'sistemas_inte', 'ps_banco', 'banco_inte', 'ps_servico', 'servico_inte', 'end_gitinss', 'autenticacao', 'obsvr'];
+    protected $fillable = ['ambiente_hospedagem', 'prioridade', 'linguagem_v', 'framework', 'banco_v', 'intra_inter', 'nome_banco', 'ip_hospedagemapp', 'ip_hospedagembd', 'tamanho_app', 'tamanho_bd', 'ps_sistemas', 'sistemas_inte', 'ps_banco', 'banco_inte', 'ps_servico', 'servico_inte', 'end_gitinss', 'autenticacao', 'obsvr', 'sistGestaoFK'];
     public $table = 'sistemastecnico';
 }
 
@@ -37,6 +37,7 @@ if (!Schema::hasTable('sistemastecnico')) {
         $table->string('end_gitinss');
         $table->string('autenticacao');
         $table->string('obsvr')->nullable();
+        $table->string('sistGestaoFK');
         $table->save();
     });
 }
