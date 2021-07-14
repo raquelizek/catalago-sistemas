@@ -7,6 +7,7 @@ use App\Models\SistemasTec;
 use GrahamCampbell\ResultType\Result;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Stmt\Echo_;
 
 class SistemasTecnicosController extends Controller
 {
@@ -16,18 +17,16 @@ class SistemasTecnicosController extends Controller
         return view('admin.cadastrotec');
     }
 
-    public function create(Request $request, $id)
+    public function show(Request $request, $id)
     {
-        //$sistemastecnico = SistemasTec::findOrFail($id);
-
-        return view('admin.cadastrotec')->with('id', $id);
+        $VAI = SistemasTec::firstWhere('sistGestaoFK', $id);
+        return view('admin.cadastrotec')->with('VAI', $VAI);
     }
 
     public function store(Request $request)
     {
-        
         $sistemastecnicos = [
-            'sistt_id' => request('sistt_id'),
+            'sistTecnicoID' => request('sistTecnicoID'),
             'ambiente_hospedagem' => request('ambiente_hospedagem'),
             'prioridade' => request('prioridade'),
             'linguagem_v' => request('linguagem_v'),
@@ -52,17 +51,7 @@ class SistemasTecnicosController extends Controller
         ];
         SistemasTec::create($sistemastecnicos);
         return redirect('/consultar')->with('status', 'Informações Técnicas Cadastradas.');
-       // window.location.href "http://localhost:8001/consultar";
-        //return view('admin.consultar')->with('index');
-        //editar aqui
     }
 
-    public function consultarsistema(Request $Request, $sist_id)
-    {
-        $consultarsistema = DB::table('sistemasgestao')
-            ->join('sistemastecnico', 'sist_id', '=', 'sistGestaoFK')
-            ->where('sistGestaoFK', '=', '$sist_id')
-            ->get();
-        return view('admin.consultarsis')->with('consultarsistema', $consultarsistema);
-    }
+   
 }

@@ -20,7 +20,7 @@ class SistemasGest extends Model
 
 if (!Schema::hasTable('sistemasgestao')) {
     Schema::create('sistemasgestao', function ($table) {
-        $table->increments('sist_id')->primary();
+        $table->increments('sistGestaoID')->primary();
         $table->timestamps();
         $table->string('dev');
         $table->string('atuacao');

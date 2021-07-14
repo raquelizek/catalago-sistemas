@@ -41,7 +41,7 @@ class DashboardController extends Controller
     public function indexx()
     {
         $indexreg = DB::table('sistemasgestao')
-            ->join('sistemastecnico', 'sist_id', '=', 'sistGestaoFK')
+            ->join('sistemastecnico', 'sistGestaoID', '=', 'sistGestaoFK')
             ->get();
 
         return view('admin.dashboard')->with('indexreg', $indexreg);

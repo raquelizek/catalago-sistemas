@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Schema;
 
 class SistemasTec extends Model
 {
-    protected $primaryKey = 'sistt_id';
+    protected $primaryKey = 'sistTecnicoID';
     protected $fillable = ['ambiente_hospedagem', 'prioridade', 'linguagem_v', 'framework', 'banco_v', 'intra_inter', 'nome_banco', 'ip_hospedagemapp', 'ip_hospedagembd', 'tamanho_app', 'tamanho_bd', 'ps_sistemas', 'sistemas_inte', 'ps_banco', 'banco_inte', 'ps_servico', 'servico_inte', 'end_gitinss', 'autenticacao', 'obsvr', 'sistGestaoFK'];
     public $table = 'sistemastecnico';
 }
 
 if (!Schema::hasTable('sistemastecnico')) {
     Schema::create('sistemastecnico', function ($table) {
-        $table->increments('sistt_id')->primary();
+        $table->increments('sistTecnicoID')->primary();
         $table->timestamps();
         $table->string('ambiente_hospedagem');
         $table->string('prioridade');

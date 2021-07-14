@@ -24,7 +24,7 @@ class SistemasGestaoController extends Controller
     public function store(Request $request)
     {
         $sistemasgestao = [
-            'sist_id' => request('sist_id'),
+            'sistGestaoID' => request('sistGestaoID'),
             'dev' => request('dev'),
             'atuacao' => request('atuacao'),
             'auth' => request('auth'),
@@ -65,13 +65,15 @@ class SistemasGestaoController extends Controller
         return view('admin.concultarsis')->with('query', $query);
     }
    
-    public function consultarsistemas()
+    public function consultarsistema(Request $Request, $id)
     {
-        $consultarsist = DB::table('sistemasgestao')
-        ->join('sistemastecnico', 'sist_id', '=', 'sistt_id')
-        ->get();
-        return view('admin.consultarsis')->with('consultarsist', $consultarsist);
+        $GEST = SistemasGest::firstWhere('sistGestaoID', $id);
+        return view('admin.consultarsis')->with('GEST', $GEST);
+       // $GEST = DB::table('sistemasgestao')
+           // ->join('sistemastecnico', 'sistGestaoID', '=', 'sistGestaoFK')
+           // ->where('sistGestaoFK', '=', '$sistGestaoID')
+           // ->get();
+       // return view('admin.consultarsis')->with('GEST', $GEST);
     }
-
     
 }
