@@ -51,11 +51,11 @@ Consultar Sistemas
                         <tbody>
                             @foreach ($sistemas as $row)
                             <tr>
-                                <td><a href="/consultar-sist"><b>{{$row->sistnm}}</b></a></td>
+                                <td><a href="/consultar-sist/{{$row->sistGestaoID}}"><b>{{$row->sistnm}}</b></a></td>
                                 <td>{{$row->endereco}}</td>
                                 <td>{{$row->diretsi}}</td>
                                 <td>{{$row->status}}</td>
-                                <td><a href="/info-tec/{{$row->sist_id}}" class="badge badge-danger">Informações Técnicas</a></td>
+                                <td><a href="/info-tec/{{$row->sistGestaoID}}" class="badge badge-danger">Informações Técnicas</a></td>
                                 <td><a href="#" class="badge badge-info">Processo do SEI</a></td>
                                 @endforeach
                             </tr>
