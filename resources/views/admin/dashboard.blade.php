@@ -214,7 +214,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($indexreg as $row)
+                                @foreach ($sistemasinicial as $row)
                                 <tr>
                                     <td>{{$row->sistnm}}</td>
                                     <td>{{$row->endereco}}</td>
