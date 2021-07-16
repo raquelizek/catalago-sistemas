@@ -16,8 +16,6 @@ class CatalogoSistemas extends Model
     public $table = 'TB_SISTEMAS';
 }
 
-
-
 if (!Schema::hasTable('TB_SISTEMAS')) {
     Schema::create('TB_SISTEMAS', function ($table) {
         $table->increments('sistemasID')->primary();
@@ -45,26 +43,26 @@ if (!Schema::hasTable('TB_SISTEMAS')) {
         $table->string('prsei');
         $table->string('numerosei', 30)->unique();
         $table->text('obsv')->nullable();
-        $table->string('ambiente_hospedagem');
-        $table->string('prioridade');
-        $table->string('linguagem_v');
-        $table->string('framework');
-        $table->string('banco_v');
+        $table->string('ambiente_hospedagem')->nullable();;
+        $table->string('prioridade')->nullable();;
+        $table->string('linguagem_v')->nullable();;
+        $table->string('framework')->nullable();;
+        $table->string('banco_v')->nullable();;
         $table->string('intra_inter')->nullable();
-        $table->string('nome_banco');
-        $table->string('ip_hospedagemapp');
-        $table->string('ip_hospedagembd');
-        $table->string('tamanho_app');
-        $table->string('tamanho_bd');
-        $table->string('ps_sistemas');
+        $table->string('nome_banco')->nullable();;
+        $table->string('ip_hospedagemapp')->nullable();;
+        $table->string('ip_hospedagembd')->nullable();;
+        $table->string('tamanho_app')->nullable();;
+        $table->string('tamanho_bd')->nullable();;
+        $table->string('ps_sistemas')->nullable();;
         $table->string('sistemas_inte')->nullable();
-        $table->string('ps_banco');
+        $table->string('ps_banco')->nullable();;
         $table->string('banco_inte')->nullable();
-        $table->string('ps_servico');
+        $table->string('ps_servico')->nullable();;
         $table->string('servico_inte')->nullable();
-        $table->string('end_gitinss');
-        $table->string('autenticacao');
-        $table->string('obsvr')->nullable();
+        $table->string('end_gitinss')->nullable();;
+        $table->string('autenticacao')->nullable();;
+        $table->text('obsvr')->nullable();
         $table->save();
     });
    

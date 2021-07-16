@@ -66,18 +66,18 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 		return view('admin.consultarsis');
 	});
 
-	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'registered'])->name('registeru');
-	Route::get('/cadastrar-sistemas', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'create']);
-	Route::post ('/salvarsistema', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'store']);
-	Route::get('/edit/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registeredit'])->name('edit');
-	Route::put('/usuarios-registrados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerupdate']);
-	Route::delete('/usuarios-deletados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'registerdelete']);
-	Route::get('/consultar', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'allregister']);
-	Route::post ('/salvarsistematec', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'store']);
-	Route::get('/info-tec/{sistTecnicoID}', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'show']);
-	Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'indexx']);
-	Route::get('/editar-sistema', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'editarsist']);
-	Route::get('/consultar-sist/{sistGestaoID}', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'consultarsistema']);
+	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'show']);
+	Route::get('/cadastrar-sistemas', [App\Http\Controllers\Admin\SistemasCatalogoController::class, 'create']);
+	Route::post ('/salvarsistema', [App\Http\Controllers\Admin\SistemasCatalogoController::class, 'store']);
+	Route::get('/edit/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'edit']);
+	Route::put('/usuarios-registrados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'update']);
+	Route::delete('/usuarios-deletados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'destroy']);
+	Route::get('/consultar', [App\Http\Controllers\Admin\SistemasCatalogoController::class, 'show']);
+	Route::post ('/salvarsistematec', [App\Http\Controllers\Admin\SistemasCatalogoController::class, 'store']);
+	Route::get('/info-tec/{sistTecnicoID}', [App\Http\Controllers\Admin\SistemasCatalogoController::class, 'show']);
+	Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
+	Route::get('/editar-sistema', [App\Http\Controllers\Admin\SistemasCatalogoController::class, 'editarsist']);
+	Route::get('/consultar-sist/{sistemasID}', [App\Http\Controllers\Admin\SistemasCatalogoController::class, 'consultarsistema']);
 	
 	
 });
