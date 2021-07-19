@@ -12,7 +12,7 @@ class SistemasCatalogoController extends Controller
 {
     public function index()
     {
-        $sistemasgestao =CatalogoSistemas::all();
+        $sistemas =CatalogoSistemas::all();
         return view('admin.cadastrarsis');
         
     }
@@ -25,7 +25,7 @@ class SistemasCatalogoController extends Controller
     public function store(Request $request)
     {
         
-        $sistemasgestao = [
+        $sistemas = [
             'sistemasID' => request('sistemasID'),
             'dev' => request('dev'),
             'atuacao' => request('atuacao'),
@@ -69,29 +69,29 @@ class SistemasCatalogoController extends Controller
             'servico_inte' => request('servico_inte'),
             'end_gitinss' => request('end_gitinss'),
             'autenticacao' => request('autenticacao'),
-            'sistGestaoFK' => request('sistGestaoFK'),
             'obsvr' => request('obsvr') 
             
         ];
-        CatalogoSistemas::create($sistemasgestao);
-        
-        return redirect('/consultar')->with('status', 'Sistema incluído com sucesso.');
 
+        CatalogoSistemas::create($sistemas);
+        return redirect('/consultar')->with('status', 'Sistema incluído com sucesso.');
     }
         
     public function show()
     {
         $sistemas = CatalogoSistemas::all();
         return view('admin.consultar')->with('sistemas', $sistemas);
+        
     }
 
     public function edit($id)
     {
         $query = CatalogoSistemas::findOrFail($id);
-        return view('admin.concultarsis')->with('query', $query);
+        return view('admin.cadastrotec')->with('query', $query);
     }
    
     public function consultarsistema(Request $Request, $id)
+    //////// consultar sistemas nome da rota /////////
     {
         $GEST = CatalogoSistemas::firstWhere('sistemasID', $id);
         return view('admin.consultarsis')->with('GEST', $GEST);

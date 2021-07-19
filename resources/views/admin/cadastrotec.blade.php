@@ -19,7 +19,7 @@ Informações Técnicas
                     <br>
                 </div>
                 <form action="/salvarsistematec" method="post">
-                    {{csrf_field() }}
+                    @csrf
                     <div class="card-header" class="card-title">
                         <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
                     </div>
@@ -59,10 +59,6 @@ Informações Técnicas
                                         </div>
                                     </div>
                                     
-                                        
-                                            
-                                            <input type="hidden" name="sistGestaoFK" id="sistGestaoFK" value="{{@$VAI->sistGestaoFK }}" class="form-control form-control-alternative">
-                                        
                                     
                                     <div class="col-md-4">
                                         <div class="form-group">

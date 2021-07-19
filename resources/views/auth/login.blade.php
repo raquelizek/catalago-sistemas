@@ -53,13 +53,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-dark" href="{{ route('password.request') }}">
-                                        {{ __('Esqueceu a senha?') }}
-                                    </a>
-                                @endif
-
-                                
+                                                              
 
                                 <button type="submit" href="{{ route('register') }}" class="btn btn-dark">
                                     {{ __('Registrar-se') }}
