@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\DomCrawler\Form;
 
-class SistemasCatalogoController extends Controller
+class SistemasGestaoController extends Controller
 {
     public function index()
     {
