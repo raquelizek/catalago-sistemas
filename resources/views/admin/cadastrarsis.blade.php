@@ -33,7 +33,7 @@ Consultar Sistemas
                             <div class="col-md-3">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-dev">Desenvolvedor</label>
-                                    <input type="text" name="dev" id="dev"  class="form-control">
+                                    <input type="text" name="dev" id="dev" value="{{@$VAI->dev}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-3 ">

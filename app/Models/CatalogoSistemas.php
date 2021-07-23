@@ -20,27 +20,27 @@ if (!Schema::hasTable('TB_SISTEMAS')) {
     Schema::create('TB_SISTEMAS', function ($table) {
         $table->increments('sistemasID')->primary();
         $table->timestamps();
-        $table->string('dev');
-        $table->string('atuacao');
-        $table->string('auth');
-        $table->string('diretsi');
-        $table->string('sistnm');
-        $table->string('sissig');
-        $table->string('endereco', 60);
-        $table->string('status');
-        $table->string('dns');
-        $table->string('pdti');
-        $table->string('gac');
-        $table->string('gds');
-        $table->string('gnt');
+        $table->string('dev')->nullable();
+        $table->string('atuacao')->nullable();
+        $table->string('auth')->nullable();
+        $table->string('diretsi')->nullable();
+        $table->string('sistnm')->nullable();
+        $table->string('sissig')->nullable();
+        $table->string('endereco', 60)->nullable();
+        $table->string('status')->nullable();
+        $table->string('dns')->nullable();
+        $table->string('pdti')->nullable();
+        $table->string('gac')->nullable();
+        $table->string('gds')->nullable();
+        $table->string('gnt')->nullable();
         $table->string('siapegnt', 7)->nullable();
-        $table->string('gns');
+        $table->string('gns')->nullable();
         $table->string('siapegns', 7)->nullable();
-        $table->string('git');
+        $table->string('git')->nullable();
         $table->string('siapegit', 7)->nullable();
-        $table->string('gis');
+        $table->string('gis')->nullable();
         $table->string('siapegis', 7)->nullable();
-        $table->string('prsei');
+        $table->string('prsei')->nullable();
         $table->string('numerosei', 30)->unique();
         $table->text('obsv')->nullable();
         $table->string('ambiente_hospedagem')->nullable();
@@ -63,7 +63,7 @@ if (!Schema::hasTable('TB_SISTEMAS')) {
         $table->string('end_gitinss')->nullable();
         $table->string('autenticacao')->nullable();
         $table->text('obsvr')->nullable();
-        
+        $table->save();
        
     });
    
