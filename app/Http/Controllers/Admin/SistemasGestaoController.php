@@ -63,11 +63,6 @@ class SistemasGestaoController extends Controller
         
     }
 
-    public function edit($id)
-    {
-        $query = CatalogoSistemas::findOrFail($id);
-        return view('admin.cadastrotec')->with('query', $query);
-    }
    
     public function consultarsistema(Request $Request, $id)
     //////// consultar sistemas nome da rota /////////

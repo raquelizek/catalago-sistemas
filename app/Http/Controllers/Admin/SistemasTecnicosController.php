@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\CatalogoSistemas;
@@ -8,15 +8,20 @@ use Illuminate\Http\Request;
 
 class SistemasTecnicosController extends Controller
 {
+    public function index()
+    {
+        $sistemas = CatalogoSistemas::all();
+        return view('admin.consultar')->with('sistemas', $sistemas);
+    }
+
     public function create()
     {
-        return view('admin.consultar');
+        return view('admin.cadastrotec');
     }
 
     public function store(Request $request)
     {
         $sistemas = [
-            'sistemasID' => request('sistemasID'),
             'ambiente_hospedagem' => request('ambiente_hospedagem'),
             'prioridade' => request('prioridade'),
             'linguagem_v' => request('linguagem_v'),
@@ -39,11 +44,17 @@ class SistemasTecnicosController extends Controller
             'obsvr' => request('obsvr')
 
         ];
-        CatalogoSistemas::create($sistemas);
+
+        CatalogoSistemas::edit($sistemas);
         return redirect('/consultar')->with('status', 'Sistema incluído com sucesso.');
     }
 
-    
+    public function show()
+    {
+        $sistemas = CatalogoSistemas::all();
+        return view('admin.consultar')->with('sistemas', $sistemas);
+    }
+
     public function edit($id)
     {
         $query = CatalogoSistemas::findOrFail($id);
