@@ -5,23 +5,25 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\CatalogoSistemas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
 
 class SistemasTecnicosController extends Controller
 {
     public function index()
     {
-        $sistemas = CatalogoSistemas::all();
-        return view('admin.consultar')->with('sistemas', $sistemas);
+        $sistemastec = CatalogoSistemas::all();
+        return view('admin.consultar')->with('sistemastec', $sistemastec);
     }
 
-    public function create()
+    public function create(Request $Request, $id)
     {
         return view('admin.cadastrotec');
     }
 
     public function store(Request $request)
     {
-        $sistemas = [
+        $sistemastec = [
+
             'ambiente_hospedagem' => request('ambiente_hospedagem'),
             'prioridade' => request('prioridade'),
             'linguagem_v' => request('linguagem_v'),
@@ -42,22 +44,29 @@ class SistemasTecnicosController extends Controller
             'end_gitinss' => request('end_gitinss'),
             'autenticacao' => request('autenticacao'),
             'obsvr' => request('obsvr')
-
         ];
-
-        CatalogoSistemas::edit($sistemas);
-        return redirect('/consultar')->with('status', 'Sistema incluído com sucesso.');
+        CatalogoSistemas::create($sistemastec);
+        return redirect('/consultar')->with('status', 'Informações Técnicas cadastradas.');
     }
 
-    public function show()
+    public function show($id)
     {
-        $sistemas = CatalogoSistemas::all();
-        return view('admin.consultar')->with('sistemas', $sistemas);
+        $VAI = CatalogoSistemas::findOrFail($id);
+        return view('admin.consultar')->with('VAI', $VAI);
     }
 
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        $query = CatalogoSistemas::findOrFail($id);
-        return view('admin.cadastrotec')->with('query', $query);
+        $VAI = CatalogoSistemas::firstWhere('sistemasID', $id);
+        return view('admin.cadastrotec')->with('VAI', $VAI);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $sistemastec = CatalogoSistemas::find('sistemasID', 1)->get($id);
+        
+
+
+        return redirect('/consultar')->with('sistemastec', $sistemastec);
     }
 }
