@@ -13,7 +13,9 @@ class SistemasGestaoController extends Controller
     public function index()
     {
         $sistemas =CatalogoSistemas::all();
-        return view('admin.cadastrarsis');
+        
+        
+       return view('admin.cadastrarsis');
         
     }
 
@@ -58,7 +60,8 @@ class SistemasGestaoController extends Controller
         
     public function show()
     {
-        $sistemas = CatalogoSistemas::all();
+        $sistemas = CatalogoSistemas::all(); 
+         
         return view('admin.consultar')->with('sistemas', $sistemas);
         
     }
