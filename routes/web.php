@@ -73,8 +73,8 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::put('/usuarios-registrados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'update']);
 	Route::delete('/usuarios-deletados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'destroy']);
 	Route::get('/consultar', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'show']);
-	Route::post('/salvarsistematec', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'store']);
-	Route::get('/info-tec/{sistemasID}', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'update']);
+	Route::post('/salvarsistematec/{sistemasID}', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'store']);
+	Route::get('/info-tec/{sistemasID}', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'show']);
 	Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 	Route::get('/consultar-sist/{sistemasID}', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'consultarsistema']);
 });
