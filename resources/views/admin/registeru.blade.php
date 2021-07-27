@@ -40,7 +40,7 @@ Editar Permissões
                                     <td>{{$row->usertype}}</td>
                                     <td>{{$row->email}}</td>
                                     <td>
-                                        <a href="/edit/{{ $row->id }}" button type="button" class="btn btn-outline-primary">Editar</a>
+                                        <a href="/edit/{{ $row->id }}" button type="button" class="btn btn-outline-success">Editar</a>
                                     </td>
                                     <td>
                                         <form action="/usuarios-deletados/ {{ $row->id }}" method="post">

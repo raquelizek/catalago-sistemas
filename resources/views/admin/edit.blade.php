@@ -35,7 +35,7 @@ Editar Permissões
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
+                    <button type="submit" class="btn btn btn-outline-success">Salvar</button>
                     <a href="/usuarios-registrados" class="btn btn-outline-danger">Cancelar</a>
                 </form>
             </div>

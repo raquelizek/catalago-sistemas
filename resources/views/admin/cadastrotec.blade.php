@@ -18,7 +18,7 @@ Informações Técnicas
                     <h2 class="card-title text-uppercase text-default mb-0 ">Adicionar Informações Técnicas</h2>
                     <br>
                 </div>
-                <form action="/salvarsistematec" method="post">
+                <form action="/salvarsistematec/{{$VAI->sistemasID}}" method="post">
                     @csrf
                     <div class="card-header" class="card-title">
                         <button type="submit" class="btn btn btn-outline-primary">Salvar</button>
@@ -36,9 +36,11 @@ Informações Técnicas
                                     <div class="col-md-8">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="input-name">Ambiente Atual da Hospedagem</label>
-                                            <input type="text" name="ambiente_hospedagem" id="ambiente_hospedagem" value="{{@$VAI->ambiente_hospedagem}}" class="form-control form-control-alternative">
+                                            <input type="text" name="ambiente_hospedagem" id="ambiente_hospedagem" required value="{{@$VAI->ambiente_hospedagem}}" class="form-control form-control-alternative">
                                         </div>
                                     </div>
+
+                                     
                                     <div class="col-md-4">
                                         <div class="form-group focused">
                                             <label class="form-control-label" for="">Prioridade</label>

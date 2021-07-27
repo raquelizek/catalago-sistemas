@@ -184,10 +184,13 @@
                     <form class="navbar-search navbar-search-light  mr-sm-3" id="navbar-search-main">
                         <div class="form-group mb-0">
                             <div class="input-group input-group-alternative input-group-merge">
-                                <div class="input-group-prepend">
-                                    <a href="/"><span class="input-group-text"><i class=" fas fa-search"></i></span></a>
-                                </div>
-                                <input class="form-control mr-sm-3" placeholder="Pesquisar" type="text">
+                                <form method="get" >
+                                    <div class="input-group-prepend">
+                                        <input class=""><span class="input-group-text"><i class=" fas fa-search"></i></span></a>
+                                    </div>
+                                    <input class="form-control mr-sm-3" name="Pesquisar" placeholder="Pesquisar" type="text">
+                                    <input type="submit" value="pesquisar"/>
+                                </form>
                             </div>
                         </div>
                     </form>
