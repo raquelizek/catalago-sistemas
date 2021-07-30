@@ -78,5 +78,10 @@ class SistemasGestaoController extends Controller
            // ->get();
        // return view('admin.consultarsis')->with('GEST', $GEST);
     }
-    
+ 
+    public function update ()
+
+    {
+//1- colocar request / 2- find igual no tecnico / 3-declarar os requests e no final chamar a função update
+    }
 }
