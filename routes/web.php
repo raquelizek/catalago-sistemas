@@ -67,6 +67,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	});
 
 	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'show']);
+	Route::get('/cadastrar-sistemas/{sistemasID}', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'update']);
 	Route::get('/cadastrar-sistemas', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'create']);
 	Route::post('/salvarsistema', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'store']);
 	Route::get('/edit/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'edit']);
