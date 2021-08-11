@@ -184,12 +184,10 @@
                     <form class="navbar-search navbar-search-light  mr-sm-3" id="navbar-search-main">
                         <div class="form-group mb-0">
                             <div class="input-group input-group-alternative input-group-merge">
-                                <form method="get">
+                                <form action="/" method="get">
                                     <div class="input-group-prepend">
-                                        <input class=""><span class="input-group-text"><i class=" fas fa-search"></i></span></a>
+                                        <input class="form-control mr-sm-3" name="pesquisar" placeholder="Pesquisar" type="text">
                                     </div>
-                                    <input class="form-control mr-sm-3" name="Pesquisar" placeholder="Pesquisar" type="text">
-                                    <input type="submit" value="pesquisar" />
                                 </form>
                             </div>
                         </div>
@@ -200,36 +198,37 @@
         <br>
         <div class="row justify-content-center">
             <div class="card" style="width: 100rem;">
-                    <div class="card-body">
-                        <h3 class="card-title">Últimos Sistemas Cadastrados</h3>
-                        <div class="card-title">
-                            <a href="consultar" button type="button" class="btn btn-outline-primary">Visualizar todos os Sistemas</a>
+                <div class="card-body">
+                    <h3 class="card-title">Últimos Sistemas Cadastrados</h3>
+                    <div class="card-title">
+                        <a href="consultar" button type="button" class="btn btn-outline-primary">Visualizar todos os Sistemas</a>
 
-                        </div>
-                        <div class="table-responsive ">
-                            <table class="table">
-                                <thead class=" text-black">
-                                    <tr>
-                                        <th><b>Nome do Sistema</b></th>
-                                        <th><b>Endereço do Sistema</b></th>
-                                        <th><b>Área Demandante</b></th>
-                                        <th><b>Intranet/Internet</b></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($sistemasinicial as $row)
-                                    <tr>
-                                        <td>{{$row->sistnm}}</td>
-                                        <td>{{$row->endereco}}</td>
-                                        <td>{{$row->diretsi}}</td>
-                                        <td>{{$row->intra_inter}}</td>
+                    </div>
+                    <div class="table-responsive ">
+                        <table class="table">
+                            <thead class=" text-black">
+                                <tr>
+                                    <th><b>Nome do Sistema</b></th>
+                                    <th><b>Endereço do Sistema</b></th>
+                                    <th><b>Área Demandante</b></th>
+                                    <th><b>Intranet/Internet</b></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($sistemasinicial as $row)
+                                <tr>
+                                    <td>{{$row->sistnm}}</td>
+                                    <td>{{$row->endereco}}</td>
+                                    <td>{{$row->diretsi}}</td>
+                                    <td>{{$row->intra_inter}}</td>
 
-                                        @endforeach
-                                    </tr>
+                                    @endforeach
+                                </tr>
 
-                                </tbody>
-                            </table>
-                        </div>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
         </div>

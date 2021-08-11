@@ -42,7 +42,6 @@
                             <span class="nav-link-text">Página Inicial</span>
                         </a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link " href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                             <i class="fas fa-chalkboard text-blue"></i>
@@ -78,7 +77,14 @@
                     <span class="docs-normal">Prioridades</span>
                 </h6>
                 <!-- Navigation -->
+                
                 <ul class="navbar-nav mb-md-3">
+                <li class="nav-item ">
+                        <a class="nav-link" href="/painel">
+                            <i class="fas fa-chart-bar text-green"></i>
+                            <span class="nav-link-text">Painel</span>
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
                             <i class="far fa-circle text-danger"></i>
@@ -127,7 +133,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-search"></i></span>
                             </div>
-                            <input class="form-control" placeholder="Pesquisar" type="text">
+                            <input class="form-control" name="pesquisar" placeholder="Pesquisar" type="text">
                         </div>
                     </div>
                     <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
@@ -165,8 +171,6 @@
                             </div>
                         </a>
                         <div class="dropdown-menu  dropdown-menu-right ">
-                            
-                            
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 <i class="fas fa-door-open"></i>
@@ -175,7 +179,6 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
-
                         </div>
                     </li>
                 </ul>
