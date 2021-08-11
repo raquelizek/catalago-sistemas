@@ -13,7 +13,7 @@ class SistemasTecnicosController extends Controller
     public function index()
     {
         $sistemastec = CatalogoSistemas::all();
-        return view('admin.consultar')->with('sistemastec', $sistemastec);
+        return view('admin.painel')->with('sistemastec', $sistemastec);
     }
 
     public function create()
@@ -23,9 +23,6 @@ class SistemasTecnicosController extends Controller
 
     public function store(Request $request, $id)
     {
-        
-        
-         
         $sistemastec = CatalogoSistemas::find($id);
 
             $sistemastec->ambiente_hospedagem = $request-> input('ambiente_hospedagem');

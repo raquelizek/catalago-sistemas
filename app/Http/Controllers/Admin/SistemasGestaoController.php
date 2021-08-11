@@ -60,9 +60,31 @@ class SistemasGestaoController extends Controller
         
     public function show()
     {
-        $sistemas = CatalogoSistemas::all(); 
-         
-        return view('admin.consultar')->with('sistemas', $sistemas);
+        {
+            $search = request('pesquisar');
+            if ($search) {
+                $sistemasinicial = CatalogoSistemas::where([[
+             
+                    
+                        'sistnm',
+                        'like',
+                        '%' . $search . '%'
+                    
+                ]])
+                ->orWhere([[ 'diretsi', 'like', '%' . $search . '%' ]]) 
+                ->orWhere([[ 'endereco', 'like', '%' . $search . '%' ]]) 
+                ->orWhere([[ 'sissig', 'like', '%' . $search . '%' ]]) 
+                ->orWhere([[ 'numerosei', 'like', '%' . $search . '%' ]]) 
+                ->orWhere([[ 'prioridade', 'like', '%' . $search . '%' ]]) 
+                ->orWhere([[ 'endereco', 'like', '%' . $search . '%' ]]) 
+                ->orWhere([[ 'endereco', 'like', '%' . $search . '%' ]]) 
+                ->get();
+                
+            } else {
+                $sistemasinicial = CatalogoSistemas::all();
+            }
+            return view('admin.consultar')->with('sistemasinicial', $sistemasinicial, 'pesquisar', $search);
+        }
         
     }
 

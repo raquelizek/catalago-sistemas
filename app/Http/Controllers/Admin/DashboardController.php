@@ -39,9 +39,28 @@ class DashboardController extends Controller
 
     public function index()
     {
-        $sistemasinicial = CatalogoSistemas::all();
-        return view('admin.dashboard')->with('sistemasinicial', $sistemasinicial);
+        $search = request('pesquisar');
+        if ($search) {
+            $sistemasinicial = CatalogoSistemas::where([[
+         
+                
+                    'sistnm',
+                    'like',
+                    '%' . $search . '%'
+                
+            ]])
+            ->orWhere([[ 'diretsi', 'like', '%' . $search . '%' ]]) 
+            ->orWhere([[ 'endereco', 'like', '%' . $search . '%' ]]) 
+            ->orWhere([[ 'endereco', 'like', '%' . $search . '%' ]]) 
+            ->orWhere([[ 'endereco', 'like', '%' . $search . '%' ]]) 
+            ->orWhere([[ 'endereco', 'like', '%' . $search . '%' ]]) 
+            ->orWhere([[ 'endereco', 'like', '%' . $search . '%' ]]) 
+            ->orWhere([[ 'endereco', 'like', '%' . $search . '%' ]]) 
+            ->get();
+            
+        } else {
+            $sistemasinicial = CatalogoSistemas::all();
+        }
+        return view('admin.dashboard')->with('sistemasinicial', $sistemasinicial, 'pesquisar', $search);
     }
-
-    
 }
