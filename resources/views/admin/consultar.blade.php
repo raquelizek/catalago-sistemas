@@ -12,7 +12,7 @@ Consultar Sistemas
 <div class="container-mt-8">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="width: 90rem;">
+            <div class="card" style="width: 1520px;">
                 <div class="card-header border-0" class="card-title text-uppercase text-default mb-0 ">
                     <h2 class="card-title text-uppercase text-default mb-0 ">Últimos Sistemas Cadastrados</h2>
                     <br>
@@ -28,7 +28,7 @@ Consultar Sistemas
                         </div>
                     </div>
                     <br>
-                    <div class="container">
+                    <div class="container" style="width: 100%;">
                         <div class="col-md-12">
                             <div class="row justify-content-center">
                                 <div class="col ">
@@ -59,7 +59,7 @@ Consultar Sistemas
                         <br>
 
                         <br>
-                        <div class="table-sm table-responsive-sm" style="width: 75rem;">
+                        <div class="table-sm table-responsive" style="width: 100%;">
                             <table class="table">
                                 <thead class="thead-light">
                                     <tr>
