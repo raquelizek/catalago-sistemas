@@ -25,21 +25,21 @@ Consultar Sistemas
                                 value: 300,
                                 color: "#F7464A",
                                 highlight: "#FF5A5E",
-                                label: "Red"
+                                label: "Prioridade 1"
                             },
 
                             {
                                 value: 50,
                                 color: "#00BFFF",
                                 highlight: "#1E90FF	",
-                                label: "Blue"
+                                label: "Prioridade 3 e 4"
                             },
 
                             {
                                 value: 100,
                                 color: "#FDB45C",
                                 highlight: "#FFC870",
-                                label: "Yellow"
+                                label: "Prioridade 2"
                             }
                         ];
                         var ctx = document.getElementById("myChart").getContext("2d");

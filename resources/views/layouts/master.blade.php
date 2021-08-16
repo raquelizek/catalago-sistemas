@@ -38,7 +38,7 @@
                     <!-- Nav items -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard">
+                            <a class="nav-link" href="/consultar">
                                 <i class="fas fa-brain text-green"></i>
                                 <span class="nav-link-text">Página Inicial</span>
                             </a>
