@@ -18,9 +18,12 @@ Route::get('/', function () {
 	return view('auth.login');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('register');
 Auth::routes();
 
 
@@ -46,31 +49,35 @@ Route::group(['middleware' => 'auth'], function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/consultar-sistemas', [App\Http\Controllers\User\DashboardUserController::class, 'index']);	
+Route::get('/pdf', [App\Http\Controllers\User\SistemasController::class, 'show']);
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
 
-	Route::get('/dashboard', function () {
-		return view('admin.dashboard');
-	});
 	Route::get('/consultar', function () {
 		return view('admin.consultar');
 	});
-
+	Route::get('/cadastrar-sistemas', function () {
+		return view('admin.cadastrarsis');
+	});
 	Route::get('/info-tec', function () {
 		return view('admin.cadastrotec');
 	});
-	Route::get('/meu-perfil', function () {
-		return view('admin.profile');
+	Route::get('/usuarios-registrados', function () {
+		return view('admin.registeru');
 	});
-	Route::get('/consultar-sist', function () {
-		return view('admin.consultarsis');
+	Route::get('/editar-permissoes', function () {
+		return view('admin.editarpermissoes');
+	});
+	Route::get('/painel', function () {
+		return view('admin.painel');
 	});
 
 	Route::get('/usuarios-registrados', [App\Http\Controllers\Admin\DashboardController::class, 'show']);
 	Route::get('/cadastrar-sistemas/{sistemasID}', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'update']);
 	Route::get('/cadastrar-sistemas', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'create']);
 	Route::post('/salvarsistema', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'store']);
-	Route::get('/edit/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'edit']);
+	Route::get('/editar-permissoes/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'edit']);
 	Route::put('/usuarios-registrados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'update']);
 	Route::delete('/usuarios-deletados/{id}', [App\Http\Controllers\Admin\DashboardController::class, 'destroy']);
 	Route::get('/consultar', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'show']);
@@ -79,4 +86,5 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 	Route::get('/consultar-sist/{sistemasID}', [App\Http\Controllers\Admin\SistemasGestaoController::class, 'consultarsistema']);
 	Route::get('/painel', [App\Http\Controllers\Admin\SistemasTecnicosController::class, 'index']);	
+	
 });
