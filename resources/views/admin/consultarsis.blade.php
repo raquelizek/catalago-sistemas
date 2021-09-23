@@ -8,7 +8,9 @@ Informações dos Sistemas
 
 
 <tbody>
+    
     <br>
+    
     <div class="container">
         <div class="row justify-content-center">
             <div class="card" style="width: 100rem;">
@@ -16,22 +18,20 @@ Informações dos Sistemas
                     <h3 class="card-title">{{@$GEST->sistnm}}</h3>
                     <hr class="my-0">
                     <br>
+                    
                     <div class="card-title">
                         <div class="row justify-content-center align-items-center ">
-                            <h2>Informações da Aréa de negócio</h2>
+                            <h3>Informações da Aréa de negócio</h3>
                         </div>
                     </div>
                     <div class="table-responsive ">
                         <table class="table">
-                            
-                            
                             <tr>
-                            <thead>
-                                <th><b>Desenvolvedor </b> 
-                                <td> {{@$GEST->dev}}</td>
-                                </th>
+                                <thead>
+                                    <th><b>Desenvolvedor </b>
+                                    <td> {{@$GEST->dev}}</td>
+                                    </th>
                             </tr>
-                            <thead>
                             <tr>
                                 <th><b>Atuação</b></th>
                                 <td>{{@$GEST->atuacao}}</td>
@@ -116,20 +116,28 @@ Informações dos Sistemas
                                 <th><b>SIAPE</b></th>
                                 <td>{{@$GEST->siapegis}}</td>
                             </tr>
+                            <tr>
+                                <th><b>Observação </b></th>
+                                <td>{{@$GEST->obsv}}</td>
+                            </tr>
                         </table>
                     </div>
-                    <div class="table-responsive ">
-                        <br>
-                        <table class="table">
-                            <div class="card-title">
-                                <div class="row justify-content-center align-items-center ">
-                                    <h3>Informações Técnicas</h3>
-                                </div>
-                            </div>
+
+                    <hr class="my-0">
+                    <br>
+                    <div class="card-title">
+                        <div class="row justify-content-center align-items-center ">
                             <br>
+                            <h3>Informações Técnicas</h3>
+                        </div>
+                    </div>
+                    <div class="table-responsive ">
+                        <table class="table">
                             <tr>
-                                <th><b>Ambiente Atual da Hospedagem</b></th>
-                                <td>{{@$GEST->ambiente_hospedagem}}</td>
+                                <thead>
+                                    <th><b>Ambiente Atual da Hospedagem</b>
+                                    <td> {{@$GEST->ambiente_hospedagem}}</td>
+                                    </th>
                             </tr>
                             <tr>
                                 <th><b>Prioridade</b></th>
@@ -207,7 +215,6 @@ Informações dos Sistemas
                                 <th><b>Observação Informações Técnicas</b></th>
                                 <td>{{@$GEST->obsvr}}</td>
                             </tr>
-                          
                         </table>
                     </div>
                 </div>

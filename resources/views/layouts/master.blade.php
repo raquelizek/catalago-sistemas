@@ -10,7 +10,7 @@
         @yield('title')
     </title>
     <!-- Favicon -->
-    <link rel="icon" href="/assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="/assets/img/brand/brasao-do-brasil-republica.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
@@ -27,7 +27,7 @@
         <div class="scrollbar-inner">
             <!-- Brand -->
             <div class="sidenav-header  align-items-center">
-                <a class="navbar-brand pt-4.5" href="/dashboard">
+                <a class="navbar-brand pt-4.5" href="/consultar">
                     Catálogo de Sistemas
                 </a>
             </div>
@@ -87,30 +87,6 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
-                                <i class="far fa-circle text-danger"></i>
-                                <span class="nav-link-text">Urgente</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
-                                <i class="far fa-circle text-warning"></i>
-                                <span class="nav-link-text">Atenção</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
-                                <i class="far fa-circle text-primary"></i>
-                                <span class="nav-link-text">Informal</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
-                                <i class="fas fa-box-open"></i>
-                                <span class="nav-link-text">Requisitos</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
                                 <i class="far fa-address-card"></i>
                                 <span class="nav-link-text">Responsáveis</span>
@@ -127,20 +103,7 @@
         <nav class="navbar navbar-top navbar-expand navbar-dark bg-white border-bottom">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Search form -->
-                    <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-                        <div class="form-group mb-0">
-                            <div class="input-group input-group-alternative input-group-merge">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-search"></i></span>
-                                </div>
-                                <input class="form-control" name="pesquisar" placeholder="Pesquisar" type="text">
-                            </div>
-                        </div>
-                        <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </form>
+                    
                     <!-- Navbar links -->
                     <ul class="navbar-nav align-items-center  ml-md-auto ">
                         <li class="nav-item d-xl-none">

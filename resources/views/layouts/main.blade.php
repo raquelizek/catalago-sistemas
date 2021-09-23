@@ -10,7 +10,7 @@
         @yield('title')
     </title>
     <!-- Favicon -->
-    <link rel="icon" href="/assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="/assets/img/brand/brasao-do-brasil-republica.png" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
@@ -25,11 +25,11 @@
     <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
-            <a class="navbar-brand" href="/home">
-                <img src="assets/img/brand/inss-logo-4.png" class="navbar-brand-img" alt="..."> <br>
-                Catálogo de Sistemas
-            </a>
-        </div>
+                <a class="navbar-brand pt-4.5" >
+                    Catálogo de Sistemas
+                </a>
+            </div>
+            
         <div class="navbar-inner">
             <!-- Collapse -->
             <div class="collapse navbar-collapse" id="sidenav-collapse-main">
@@ -42,7 +42,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="examples/icons.html">
+                        <a class="nav-link" href="/consultar-sistemas">
                             <i class="fas fa-chalkboard text-blue"></i>
                             <span class="nav-link-text">Consultar Sistemas</span>
                         </a>
@@ -56,13 +56,6 @@
                 </h6>
                 <!-- Navigation -->
                 <ul class="navbar-nav mb-md-3">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
-                            <i class="fas fa-box-open"></i>
-                            <span class="nav-link-text">Requisitos</span>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
                             <i class="far fa-address-card"></i>
@@ -81,6 +74,7 @@
 <div class="main-content" id="panel">
     <!-- Topnav -->
     <nav class="navbar navbar-top navbar-expand navbar-dark bg-white border-bottom">
+        
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Search form -->
@@ -176,6 +170,9 @@
     <script src="/assets/vendor/chart.js/dist/Chart.extension.js"></script>
     <!-- Argon JS -->
     <script src="/assets/js/argon.js?v=1.2.0"></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src=" asset('js/app.js') " type="text/js"></script>
 
 </body>
 

@@ -15,7 +15,7 @@ Consultar Sistemas
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header" class="card-title text-uppercase text-default mb-0 ">
-                    <h2 class="card-title text-uppercase text-default mb-0 ">Cadastar novos sistemas</h2>
+                    <h2 class="card-title text-uppercase text-default mb-0 ">Cadastrar novos sistemas</h2>
                     <br>
                 </div>
                 <form action="/salvarsistema" method="post">
