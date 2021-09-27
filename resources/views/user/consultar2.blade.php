@@ -12,7 +12,7 @@ Consultar Sistemas
 <br>
 <div class="container-mt-8">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <div class="card" style="width: 1150px;">
                 <div class="card-header border-0" class="card-title text-uppercase text-default mb-0 ">
                     <h2 class="card-title text-uppercase text-default mb-0 ">Últimos Sistemas Cadastrados</h2>
@@ -53,23 +53,14 @@ Consultar Sistemas
                                 @endif
                             </div>
                         </div>
+                        
 
-                        <br>
-
-                        <br>
-                        <style>
-                            .w-10p {
-                                width: 10% !important;
-                            }
-                        </style>
-
+                        <div class="col-md-12 mb-4 row justify-content-center">
+                        <a href="pdf" button type="button" class="btn btn-outline-secondary text-danger waves-effect px-3"><i class="fas fa-file-pdf pr-2" aria-hidden="true"></i>Gerar PDF</a>
+                        <a href="pdf" button type="button" class="btn btn-outline-secondary text-success waves-effect px-3"><i class="fas fa-file-excel pr-2" aria-hidden="true"></i>Gerar Excel</a>
+                        </div>
                         <div class="table-sm table-responsive" style="width: 90%;">
-                            <div class="col-7 text-left">
-                                <i class="fas fa-file-pdf"></i>
-                                <button class="  btn btn-danger" a href=" URL::to('/pdf') ">Gerar PDF</button>
-                                
-                            </div>
-                            <br>
+                         
                             <table class="table ">
                                 <thead class="thead-light">
                                     <tr>
@@ -88,7 +79,7 @@ Consultar Sistemas
                                     <tr class="table">
                                         <td>
                                             <div style="width: 250px; overflow: hidden;">
-                                                <a href="/consultar-sist/{{$row->sistemasID}}"><b>{{$row->sistnm}}</b></a>
+                                                <a href="/consultar-informacoes/{{$row->sistemasID}}"><b>{{$row->sistnm}}</b></a>
                                             </div>
                                         </td>
                                         <td>
@@ -110,7 +101,7 @@ Consultar Sistemas
         </div>
     </div>
     <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center" style="width: 80%;">
+        <ul class="pagination justify-content-center" style="width: 100%;">
             <li class="page-item disabled">
                 <a class="page-link" href="#" tabindex="-1">
                     <i class="fa fa-angle-left"></i>

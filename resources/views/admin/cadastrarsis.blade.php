@@ -89,6 +89,15 @@ Consultar Sistemas
                         </div>
 
                         <div class="row">
+                            <div class="col-md-12 md-8">
+                                <div class="form-group focused">
+                                    <label class="form-control-label" for="">Descrição do Sistema</label>
+                                    <textarea class="form-control form-control-alternative" name="descricao" id="descricao" rows="3" placeholder="Adicione informações sobre o sistema."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
                             <div class="col-md-2">
                                 <div class="form-group focused">
                                     <label class="form-control-label" for="input-name">DNS</label>
