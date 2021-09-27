@@ -1,5 +1,9 @@
 @extends('layouts.user')
 
+@section('title')
+Login
+@endsection
+
 @section('content')
 
 <body class="bg-secondary">
@@ -28,7 +32,7 @@
                     <div class="card bg-secondary border-0 mb-0">
                         <div class="card-header text-center "><b>{{ __('Formulário de login') }}</b></div>
                         <div class="card-body px-lg-5 py-lg-5">
-                            <form method="POST" action="{{ route('login') }}">
+                            <form method="POST" action="{{ route('login') }}" >
                                 @csrf
                                 <div class="form-group row">
                                     <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Endereço de email') }}</label>
@@ -69,9 +73,11 @@
                                         <button type="submit" class="btn btn-default">
                                             {{ __('Login') }}
                                         </button>
-                                        <button type="submit" href="{{ route('register') }}" class="btn btn-default">
+                                        <button type="submit" href="/register" class="btn btn-default">
                                             {{ __('Registrar-se') }}
                                         </button>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -80,7 +86,8 @@
         </div>
     </div>
 </body>
-</html>
+
+
 
 
 @endsection
