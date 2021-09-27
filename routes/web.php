@@ -49,8 +49,10 @@ Route::group(['middleware' => 'auth'], function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/consultar-sistemas', [App\Http\Controllers\User\DashboardUserController::class, 'index']);	
-Route::get('/pdf', [App\Http\Controllers\User\SistemasController::class, 'show']);
+Route::get('/consultar-sistemas', [App\Http\Controllers\User\SistemasController::class, 'index']);
+Route::get('/consultar-informacoes/{sistemasID}', [App\Http\Controllers\User\SistemasController::class, 'show']);	
+Route::get('pdf', [App\Http\Controllers\User\PdfController::class, 'show']);
+Route::get('sistemas/export', [App\Http\Controllers\User\SistemasController::class, 'export']);
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
 
