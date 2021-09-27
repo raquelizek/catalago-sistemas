@@ -7,6 +7,7 @@ use App\Models\CatalogoSistemas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 use PhpParser\Node\Stmt\Echo_;
+use Khill\Lavacharts\Lavacharts;
 
 class SistemasTecnicosController extends Controller
 {
@@ -58,6 +59,7 @@ class SistemasTecnicosController extends Controller
         //print_r($VAI); 
         //exit();
         return view('admin.cadastrotec')->with('VAI', $VAI);
+        
     }
 
     public function edit($id)

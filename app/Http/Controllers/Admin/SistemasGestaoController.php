@@ -37,6 +37,7 @@ class SistemasGestaoController extends Controller
             'sissig' => request('sissig'),
             'endereco' => request('endereco'),
             'status' => request('status'),
+            'descricao' => request('descricao'),
             'dns' => request('dns'),
             'pdti' => request('pdti'),
             'gac' => request('gac'),

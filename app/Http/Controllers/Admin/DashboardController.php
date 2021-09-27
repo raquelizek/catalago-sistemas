@@ -18,7 +18,7 @@ class DashboardController extends Controller
     public function edit(Request $request, $id)
     {
         $users = User::findOrFail($id);
-        return view('admin.edit')->with('users', $users);
+        return view('admin.editarpermissoes')->with('users', $users);
     }
 
     public function update(Request $request, $id)
