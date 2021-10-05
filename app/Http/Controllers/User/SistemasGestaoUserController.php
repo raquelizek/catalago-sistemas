@@ -1,35 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
 use App\Exports\SistemasExport;
-use App\Models\CatalogoSistemas;
-use \PDF;
-use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel as Excel;
+use App\Http\Controllers\Controller;
+use App\Models\CatalogoSistemas;
+use Illuminate\Http\Request;
+use \PDF;
 
-class HomeController extends Controller
+class SistemasController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function export() 
     {
         return Excel::download(new SistemasExport, 'sistemas.xlsx');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+ 
     public function index()
     { {
             $search = request('pesquisar');
@@ -63,4 +49,7 @@ class HomeController extends Controller
         $SISTG = CatalogoSistemas::firstWhere('sistemasID', $id);
         return view('user.consultarsist2')->with('SISTG', $SISTG);
     }
+
+
+   
 }
