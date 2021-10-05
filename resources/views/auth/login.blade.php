@@ -73,6 +73,7 @@ Login
                                         <button type="submit" class="btn btn-default">
                                             {{ __('Login') }}
                                         </button>
+                                        
                                         <button type="submit" href="/register" class="btn btn-default">
                                             {{ __('Registrar-se') }}
                                         </button>
